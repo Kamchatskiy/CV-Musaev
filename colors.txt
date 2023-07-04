@@ -1,0 +1,3 @@
+#000000 - black
+#00ebd4 - cyan
+#183153 - dark blue
