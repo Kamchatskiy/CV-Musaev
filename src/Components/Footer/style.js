@@ -12,18 +12,22 @@ export const ContainerFooter = styled.div`
     text-align: center;
     font-size: 75px;
 
-    
-
-    display: inline-block;
-
     border: 3px;
     border-width: 5px;
     border-style: dashed;
+
+    display: flex;
+    align-items: center;
+    justify-content: left;
 `;
 
-// list-style: none;
+export const CustomUl = styled.ul`
+    display: flex;
+    list-style: none;
+`
 
-export const FooterLink = styled.a`
+export const SocialLink = styled.a`
     color: inherit;
     text-decoration: none;
+    margin-left: 30px;
 `

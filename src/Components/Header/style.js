@@ -18,6 +18,9 @@ export const ContainerHeader = styled.div`
     border-style: dashed;
 
     padding-top: 1%;
+    
+    align-items: center;
+    justify-content: center;
 `;
 
 export const PageLink = styled(Link)`
