@@ -13,7 +13,10 @@ export const App = () =>
   (
     <>
         <BrowserRouter>
-
+          <Header />
+          <Routes>
+            <Route></Route>
+          </Routes>
         </BrowserRouter>
     </>
   );
