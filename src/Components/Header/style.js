@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import { Link } from "react-router-dom"
 
 export const ContainerHeader = styled.div`
     height: 100px;
@@ -14,3 +15,10 @@ export const ContainerHeader = styled.div`
     border-width: 5px;
     border-style: dashed;
 `;
+
+export const CustomLink = styled(Link)`
+    color: inherit;
+    text-decoration: none;
+    margin-bottom: 20%;
+    margin-left: 100px;
+;`

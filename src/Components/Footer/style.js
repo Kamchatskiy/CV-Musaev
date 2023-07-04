@@ -9,4 +9,6 @@ export const ContainerFooter = styled.div`
 
     text-align: left;
     font-size: 25px;
+
+    display: flex;
 `;
