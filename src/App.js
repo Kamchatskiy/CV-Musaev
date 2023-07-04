@@ -4,20 +4,17 @@ import {
     Route,
     BrowserRouter,
   } from "react-router-dom"
-import {Header} from "./Components/Header";
-import {Footer} from "./Components/Footer";
+import { Header } from "./Components/Header";
+import { Footer } from "./Components/Footer";
 
-export const App = () => 
-{
-  return 
-  (
+export const App = () => {
+  return (
     <>
-        <BrowserRouter>
-          <Header />
-          <Routes>
-            <Route></Route>
-          </Routes>
-        </BrowserRouter>
+      <BrowserRouter>
+        <Header />
+        <Routes>
+        </Routes>
+      </BrowserRouter>
     </>
   );
 }
