@@ -13,8 +13,8 @@ export const App = () => {
       <BrowserRouter>
         <Header />
         <Routes>
-  
         </Routes>
+        <Footer />
       </BrowserRouter>
     </>
   );

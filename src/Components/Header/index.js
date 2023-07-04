@@ -1,14 +1,15 @@
 import React from "react"
-import { ContainerHeader, CustomLink } from "./style.js";
+import { ContainerHeader, PageLink, GitHubLink } from "./style.js";
 
 export const Header = () => {
     return (
         <ContainerHeader>
-            <CustomLink to="/">Main</CustomLink>
-            <CustomLink to="/Education">Education</CustomLink>
-            <CustomLink to="/Skills">Skills</CustomLink>
-            <CustomLink to="/Projects">Projects</CustomLink>
-            <CustomLink to="/Contacts">Contacts</CustomLink> 
+            <PageLink to="/">Main</PageLink>
+            <PageLink to="/Education">Education</PageLink>
+            <PageLink to="/Skills">Skills</PageLink>
+            <PageLink to="/Projects">Projects</PageLink>
+            <GitHubLink href="https://github.com/Kamchatskiy">Github</GitHubLink>
+            <PageLink to="/Contacts">Contacts</PageLink>
         </ContainerHeader>
     );
 }

@@ -2,23 +2,32 @@ import styled from "styled-components"
 import { Link } from "react-router-dom"
 
 export const ContainerHeader = styled.div`
-    height: 100px;
-    width: 100%;
-
-    background-color: #000000;
+    @import url(https://fonts.googleapis.com/css?family=Share+Tech);
+    font-family: "Share Tech";
     color: #00ebd4;
+    font-size: 65px;
 
+    height: 100px;
+    width: 100vw;
+    background-color: #000000;
+    
     text-align: center;
-    font-size: 50px;
 
     border: 3px;
     border-width: 5px;
     border-style: dashed;
+
+    padding-top: 1%;
 `;
 
-export const CustomLink = styled(Link)`
+export const PageLink = styled(Link)`
     color: inherit;
     text-decoration: none;
-    margin-bottom: 20%;
-    margin-left: 100px;
+    margin-left: 5%;
 ;`
+
+export const GitHubLink = styled.a`
+    color: inherit;
+    text-decoration: none;
+    margin-left: 5%;
+`

@@ -1,14 +1,29 @@
 import styled from "styled-components"
 
 export const ContainerFooter = styled.div`
-    height: 50px;
-    width: 100%;
+    height: 200px;
+    width: 100vw;
+
+    margin-top: 100%;
 
     background-color: #000000;
     color: #00ebd4;
 
-    text-align: left;
-    font-size: 25px;
+    text-align: center;
+    font-size: 75px;
 
-    display: flex;
+    
+
+    display: inline-block;
+
+    border: 3px;
+    border-width: 5px;
+    border-style: dashed;
 `;
+
+// list-style: none;
+
+export const FooterLink = styled.a`
+    color: inherit;
+    text-decoration: none;
+`
