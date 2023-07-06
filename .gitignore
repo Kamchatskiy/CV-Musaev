@@ -2,9 +2,8 @@ node_modules/
 build/
 temp/ 
 LegacySite/
-Obsidian/
 *.log
 
 # misc
+ToDo.txt
 .directory
-commit.sh
