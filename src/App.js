@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import {
     Routes,
     Route,
@@ -6,22 +6,24 @@ import {
   } from "react-router-dom"
 
 import { Header } from "./Components/Header";
+import { Footer } from "./Components/Footer";
+
 import { Education } from "./Pages/Education"
 import { Skills } from "./Pages/Skills"
 import { Projects } from "./Pages/Projects"
-import { Contacts } from "./Pages/Contacts"
-import { Footer } from "./Components/Footer";
+import { Contacts } from "./Pages/Contacts";
 
 export const App = () => {  
   return (
     <>
       <BrowserRouter>
         <Header />
-        <Routes>
-          <Route>Education</Route>
-          <Route>Skills</Route>
-          <Route>Projects</Route>
-          <Route>Contacts</Route>
+        <Routes path="/">
+          {/* <Route path="/" element={<Main />} /> */}
+          <Route path="education" element={<Education />} />
+          {/* <Route path="skills" element={<Skills />} /> */}
+          {/* <Route path="projects" element={<Projects />} /> */}
+          <Route path="contacts" element={<Contacts />} />
         </Routes>
         <Footer />
       </BrowserRouter>

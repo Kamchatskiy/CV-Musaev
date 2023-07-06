@@ -1,7 +1,27 @@
 import styled from "styled-components"
-import Box from '@mui/material/Box';
-import { Link } from "react-router-dom"
+import Tab from '@mui/material/Tab';
 
+export const ContainerHeader = styled.div`
+  font-family: "Share Tech";
+  color: #00ebd4;
+  height: 100px;
+  width: 100%;
+  background-color: #000000;
+  text-align: center;
+  border: 3px dashed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+;`
+
+export const StyledTab = styled(Tab)`
+  flex: 1;
+  text-align: center;
+  border-bottom: none;
+  padding: 10px;
+;
+`
+/*
 export const ContainerHeader = styled.div`
     @import url(https://fonts.googleapis.com/css?family=Share+Tech);
     font-family: "Share Tech";
@@ -23,15 +43,4 @@ export const ContainerHeader = styled.div`
     align-items: center;
     justify-content: center;
 `;
-
-export const PageLink = styled(Link)`
-    color: inherit;
-    text-decoration: none;
-    padding-left: 5%;
-;`
-
-export const GitHubLink = styled.a`
-    color: inherit;
-    text-decoration: none;
-    padding-left: 5%;
-`
+*/

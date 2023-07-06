@@ -1,69 +1,92 @@
 import React, { useState } from "react";
-
-//for "button"
 import Button from '@mui/material/Button';
-
-//for "select"
 import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
-
 import { 
-    ContainerContacts,
-    NameInput,
-    UserContactInput,
-    MessageInput,
-    ContactsPhoto
-} from "./style";
+        ContainerContacts, 
+        NameInput, 
+        UserContactInput, 
+        MessageInput, 
+        ContactsPhoto 
+      } from "./style";
 
 export const Contacts = () => {
+  const [UserName, setUserName] = useState("");
+  const handlerOnChangeUserNameInput = (event) => {
+    setUserName(event.target.value);
+  };
 
-    const [UserName, setUserName] = useState("")
-    const handlerOnChangeUserNameInput = (event) => {
-        setUserName(event.target.value)
-    }   
+  const [UserContact, setUserContact] = useState("");
+  const handlerOnChangeUserContactInput = (event) => {
+    setUserContact(event.target.value);
+  };
 
-    const [UserContact, setUserContact] = useState("")
-    const handlerOnChangeUserContactInput = (event) => {
-        setUserContact(event.target.value)
-    }    
+  const [UserMessage, setUserMessage] = useState("");
+  const handlerOnChangeUserMessageInput = (event) => {
+    setUserMessage(event.target.value);
+  };
 
-    const [UserMessage, setUserMessage] = useState("")
-    const handlerOnChangeUserMessageInput = (event) => {
-        setUserMessage(event.target.value)
-    }    
+  const [RequestType, setRequestType] = React.useState("");
+  const handleChangeRequestType = (event) => {
+    setRequestType(event.target.value);
+  };
 
-    const [RequestType, setRequestType] = React.useState("");
-    const handleChangeRequestType = (event) => {
-      setRequestType(event.target.value);
-    } 
+  const [FieldsNotEmpty, checkFields] = useState(false);
 
-    const [FieldsNotEmpty, checkFields] = useState(false)
+  const handleSend = () => {
+    if (UserName && UserContact && UserMessage && RequestType) {
+      checkFields(true);
+    } else {
+      checkFields(false);
+    }
+  };
 
-    return (
-        <ContainerContacts>
-            <NameInput variant="outlined" value={UserName} onChange={handlerOnChangeUserNameInput}/>
-            <UserContactInput variant="outlined" value={UserContact} onChange={handlerOnChangeUserContactInput}/>
-            <MessageInput variant="outlined" value={UserMessage} onChange={handlerOnChangeUserMessageInput}/>
+  return (
+    <ContainerContacts>
+      <NameInput
+        label="Name"
+        variant="outlined"
+        value={UserName}
+        onChange={handlerOnChangeUserNameInput}
+      />
+      <UserContactInput
+        label="Email/Telegram/PhoneNumber"
+        variant="outlined"
+        value={UserContact}
+        onChange={handlerOnChangeUserContactInput}
+      />
+      <MessageInput
+        label="Message"
+        variant="outlined"
+        value={UserMessage}
+        onChange={handlerOnChangeUserMessageInput}
+        multiline
+        rows={4}
+      />
 
-            <Box sx={{ minWidth: 120 }}>
-                <FormControl fullWidth>
-                    <InputLabel>Dispatch Reason</InputLabel>
-                    <Select
-                        value={RequestType}
-                        onChange={handleChangeRequestType}
-                    >
-                        <MenuItem value={"work"}>Work Hiring</MenuItem>
-                        <MenuItem value={"outsource"}>Outsource Order</MenuItem>
-                        <MenuItem value={"other"}>Other</MenuItem>
-                    </Select>
-                </FormControl>
-            </Box>
+      <FormControl >
+        <InputLabel>Dispatch Reason</InputLabel>
+        <Select value={RequestType} onChange={handleChangeRequestType}>
+          <MenuItem value={"work"}>Work Hiring</MenuItem>
+          <MenuItem value={"outsource"}>Outsource Order</MenuItem>
+          <MenuItem value={"other"}>Other</MenuItem>
+        </Select>
+      </FormControl>
 
-            <Button variant="contained" onClick={()=>{checkFields}}>Send</Button>
-            {FieldsNotEmpty === true ? <h2>Your message was successfully sent</h2> && <p>sending email</p> : <h2>You need to fill all fields</h2>}
-            <MyPhoto src=""/>
-        </ContainerContacts>
-    );
-}
+      <Button variant="contained" onClick={handleSend}>Send</Button>
+
+      {FieldsNotEmpty ? (
+        <>
+          <h2>Your message was successfully sent</h2>
+          <p>sending email</p>
+        </>
+      ) : (
+        <h2>You need to fill all fields</h2>
+      )}
+
+      <ContactsPhoto src="" />
+    </ContainerContacts>
+  );
+};
