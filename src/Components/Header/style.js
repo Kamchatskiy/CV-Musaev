@@ -8,7 +8,7 @@ export const ContainerHeader = styled.div`
     font-size: 65px;
 
     height: 100px;
-    width: 100vw;
+    width: 100%;
     background-color: #000000;
     
     text-align: center;
@@ -26,11 +26,11 @@ export const ContainerHeader = styled.div`
 export const PageLink = styled(Link)`
     color: inherit;
     text-decoration: none;
-    margin-left: 5%;
+    padding-left: 5%;
 ;`
 
 export const GitHubLink = styled.a`
     color: inherit;
     text-decoration: none;
-    margin-left: 5%;
+    padding-left: 5%;
 `

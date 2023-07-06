@@ -2,7 +2,7 @@ import styled from "styled-components"
 
 export const ContainerFooter = styled.div`
     height: 200px;
-    width: 100vw;
+    width: 100%;
 
     margin-top: 100%;
 
@@ -29,5 +29,5 @@ export const CustomUl = styled.ul`
 export const SocialLink = styled.a`
     color: inherit;
     text-decoration: none;
-    margin-left: 30px;
+    padding-left: 30px;
 `
