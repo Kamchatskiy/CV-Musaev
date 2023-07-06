@@ -4,8 +4,8 @@ import TextField from '@mui/material/TextField';
 export const ContainerContacts = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  // align-items: left;
+  // justify-content: center;
   padding: 20px;
   gap: 16px;
 `;
@@ -24,4 +24,5 @@ export const MessageInput = styled(TextField)`
 
 export const ContactsPhoto = styled.img`
   width: 600px;
+  align-items: right;
 `

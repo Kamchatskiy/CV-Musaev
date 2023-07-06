@@ -4,7 +4,7 @@ import Tab from '@mui/material/Tab';
 export const ContainerHeader = styled.div`
   font-family: "Share Tech";
   color: #00ebd4;
-  height: 100px;
+  height: 150px;
   width: 100%;
   background-color: #000000;
   text-align: center;

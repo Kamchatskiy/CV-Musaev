@@ -80,13 +80,13 @@ export const Contacts = () => {
       {FieldsNotEmpty ? (
         <>
           <h2>Your message was successfully sent</h2>
-          <p>sending email</p>
+          <img src="http://pm1.narvii.com/7415/7e99c3dfecb5b90330dcf550ef45dfddd44f7d6cr1-702-383v2_00.jpg" />
         </>
       ) : (
         <h2>You need to fill all fields</h2>
       )}
 
-      <ContactsPhoto src="" />
+      <ContactsPhoto />
     </ContainerContacts>
   );
 };

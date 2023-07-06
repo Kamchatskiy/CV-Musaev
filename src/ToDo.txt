@@ -1,4 +1,0 @@
-стилизация селектора
-
-сделать тему цветов
-https://mui.com/material-ui/customization/color/#picking-colors

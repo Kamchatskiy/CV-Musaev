@@ -1,7 +1,7 @@
 import styled from "styled-components"
 
 export const ContainerFooter = styled.div`
-    height: 200px;
+    height: 130px;
     width: 100%;
 
     margin-top: 100%;
@@ -10,7 +10,7 @@ export const ContainerFooter = styled.div`
     color: #00ebd4;
 
     text-align: centerw;
-    font-size: 75px;
+    font-size: 45px;
 
     border: 3px;
     border-width: 5px;
