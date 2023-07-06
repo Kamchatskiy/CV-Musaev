@@ -20,10 +20,12 @@
     "styled-components": "^6.0.2"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start:dev": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+
+    "start:prod": "serve -p 16000 build/"
   },
   "author": "Marat Musaev",
   "browserslist": {
