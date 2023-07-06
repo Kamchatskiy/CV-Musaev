@@ -1,2 +1,2 @@
-docker image rm CV-Musaev
-docker build . -t CV-Musaev
+docker image rm cv
+docker build . -t cv
