@@ -1,1 +1,1 @@
-tmux new -c "docker run -d -p 15000:15000 --rm --name cv cv"
+docker run -d -p 15000:15000 --rm --name cv cv
