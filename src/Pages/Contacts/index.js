@@ -18,12 +18,6 @@ import {
 } from "./style";
 
 export const Contacts = () => {
-    // const [UserInput, setUserInput] = useState("Marat")
-    // const [aboba, setAboba] = useState(false)
-    // const handlerOnChangeInput = (event) => {
-    //   setUserInput(event.target.value)
-    //   console.log(UserInput)
-    // }
 
     const [UserName, setUserName] = useState("")
     const handlerOnChangeUserNameInput = (event) => {
@@ -73,7 +67,3 @@ export const Contacts = () => {
         </ContainerContacts>
     );
 }
-        // <input value={UserInput} onChange={handlerOnChangeInput}/>
-        // <button onClick={()=>{setUserInput("")}}>Clear</button>
-        // <button onClick={()=>{setAboba(!aboba)}}>Change</button>
-        // {aboba === true && <h1>{UserInput}</h1>}
