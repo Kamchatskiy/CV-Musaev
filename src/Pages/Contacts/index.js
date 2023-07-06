@@ -1,8 +1,7 @@
-import React, { useState, Link } from "react";
+import React, { useState } from "react";
 
 //for "button"
 import Button from '@mui/material/Button';
-import Stack from '@mui/material/Stack';
 
 //for "select"
 import InputLabel from '@mui/material/InputLabel';
@@ -13,6 +12,7 @@ import Select from '@mui/material/Select';
 import { 
     ContainerContacts,
     NameInput,
+    UserContactInput,
     MessageInput,
     ContactsPhoto
 } from "./style";
@@ -25,28 +25,40 @@ export const Contacts = () => {
     //   console.log(UserInput)
     // }
 
-    function BasicSelect() {
-        const [RequestType, setRequestType] = React.useState('');
-      
-        const handleChange = (event) => {
-          setRequestType(event.target.value);
-        }    
-    };
+    const [UserName, setUserName] = useState("")
+    const handlerOnChangeUserNameInput = (event) => {
+        setUserName(event.target.value)
+    }   
+
+    const [UserContact, setUserContact] = useState("")
+    const handlerOnChangeUserContactInput = (event) => {
+        setUserContact(event.target.value)
+    }    
+
+    const [UserMessage, setUserMessage] = useState("")
+    const handlerOnChangeUserMessageInput = (event) => {
+        setUserMessage(event.target.value)
+    }    
+
+    const [RequestType, setRequestType] = React.useState("");
+    const handleChangeRequestType = (event) => {
+      setRequestType(event.target.value);
+    } 
 
     const [FieldsNotEmpty, checkFields] = useState(false)
 
     return (
         <ContainerContacts>
-            <NameInput />
-            <MessageInput />
+            <NameInput variant="outlined" value={UserName} onChange={handlerOnChangeUserNameInput}/>
+            <UserContactInput variant="outlined" value={UserContact} onChange={handlerOnChangeUserContactInput}/>
+            <MessageInput variant="outlined" value={UserMessage} onChange={handlerOnChangeUserMessageInput}/>
 
             <Box sx={{ minWidth: 120 }}>
                 <FormControl fullWidth>
-                    <InputLabel id="demo-simple-select-label">Age</InputLabel>
+                    <InputLabel>Dispatch Reason</InputLabel>
                     <Select
-                        value={age}
-                        label="Age"
-                        onChange={handleChange}
+                        value={RequestType}
+                        onChange={handleChangeRequestType}
                     >
                         <MenuItem value={"work"}>Work Hiring</MenuItem>
                         <MenuItem value={"outsource"}>Outsource Order</MenuItem>
@@ -57,19 +69,10 @@ export const Contacts = () => {
 
             <Button variant="contained" onClick={()=>{checkFields}}>Send</Button>
             {FieldsNotEmpty === true ? <h2>Your message was successfully sent</h2> && <p>sending email</p> : <h2>You need to fill all fields</h2>}
-            <ContactsPhoto src=""/>
+            <MyPhoto src=""/>
         </ContainerContacts>
     );
 }
-/*
-
-
-  return (
-    
-  );
-}
-*/
-
         // <input value={UserInput} onChange={handlerOnChangeInput}/>
         // <button onClick={()=>{setUserInput("")}}>Clear</button>
         // <button onClick={()=>{setAboba(!aboba)}}>Change</button>

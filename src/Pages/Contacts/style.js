@@ -1,18 +1,22 @@
 import styled from "styled-components"
-import { Link } from "react-router-dom"
+import TextField from '@mui/material/TextField';
 
 export const ContainerContacts = styled.div`
 
 `
 
-export const NameInput = styled.input`
+export const NameInput = styled(TextField)`
 
 `
 
-export const MessageInput = styled.input`
+export const UserContactInput = styled(TextField)`
 
 `
 
-export const ContactsPhoto = styled.img`
+export const MessageInput = styled(TextField)`
+
+`
+
+export const MyPhoto = styled.img`
 
 `

@@ -9,7 +9,7 @@ export const ContainerFooter = styled.div`
     background-color: #000000;
     color: #00ebd4;
 
-    text-align: center;
+    text-align: centerw;
     font-size: 75px;
 
     border: 3px;
