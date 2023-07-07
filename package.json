@@ -16,16 +16,14 @@
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.14.1",
     "react-scripts": "5.0.1",
-    "serve": "^14.2.0",
     "styled-components": "^6.0.2"
   },
   "scripts": {
     "start:dev": "react-scripts start",
+    "start:prod": "serve -p 16000 build/",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-
-    "start:prod": "serve -p 16000 build/"
+    "eject": "react-scripts eject"
   },
   "author": "Marat Musaev",
   "browserslist": {

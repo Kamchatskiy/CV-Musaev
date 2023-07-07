@@ -101,10 +101,10 @@
           "certificate": ""
         },
         {
-            "title": "MIPT Summer School",
+            "title": "HSE Software Engineering Summer School - Web Development",
             "duration": "",
             "certificate": ""
-          }
+        }
       ]
     },
     {
@@ -114,7 +114,7 @@
           "title": "Dutch Store IkwordMama",
           "duration": "1 month",
           "description": "",
-          "link": ""
+          "link": "https://www.ikwordmama.nl/"
         }
       ]
     }

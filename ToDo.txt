@@ -1,22 +1,20 @@
-написать скрипт синхронизации для rpi4
-поставить на сервер
-
-достилизовать contacts
-
 страницы:
-main
-education (дописать json файл и написать парсер)
-skills (с диаграммами)
-projects (сделать затычку)
+    main
+    education (дописать json файл и написать парсер)
+    skills (с диаграммами)
+    projects (сделать затычку)
+    contacts (стилизация)
+    header (стилизация селектора)
 
-стилизация селектора
+сервер:
+    доделать docker, добавить его на сервер и наладить обновление cron
+    купить домен
+    https://www.reg.ru/buy/domain?query=musaev&place_of_order=domain-new-page&_csrf=295e42e158ce61550843f751a6f68cc1
+    or 
+    https://www.reg.ru/buy/domain?query=musaev&place_of_order=domain-new-page&_csrf=295e42e158ce61550843f751a6f68cc1
 
-сделать тему цветов
+
+сделать свою тему цветов
 https://mui.com/material-ui/customization/color/#picking-colors
 
 сделать анимации с текстом (подсвечивание, мелькание и тд)
-
-купить домен на сервер 
-https://www.reg.ru/buy/domain?query=musaev&place_of_order=domain-new-page&_csrf=295e42e158ce61550843f751a6f68cc1
-or 
-https://www.reg.ru/buy/domain?query=musaev&place_of_order=domain-new-page&_csrf=295e42e158ce61550843f751a6f68cc1
