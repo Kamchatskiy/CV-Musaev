@@ -16,7 +16,7 @@ export const Header = () => {
     const offListVisibility = () => {setListVisibility(false)};
     
     const [color, setColor] = useState('one');
-    const handleChangeColor = (event, newColor) => {
+    const handleChangeTab = (event, newColor) => {
         setColor(newColor);
         offListVisibility();
     };
@@ -25,7 +25,7 @@ export const Header = () => {
     <ContainerHeader>
         <Box sx={{ width: '100%' }}>
         <Tabs
-          onChange={handleChangeColor}
+          onChange={handleChangeTab}
           value={color}
           textColor="one"
           indicatorColor="primary"

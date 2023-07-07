@@ -4,14 +4,16 @@ import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
-import Alert from "@mui/material/Alert";
-import { 
-        ContainerContacts, 
-        NameInput, 
-        UserContactInput, 
-        MessageInput, 
-        ContactsPhoto 
-      } from "./style";
+import MuiAlert from '@mui/material/Alert';
+import Snackbar from "@mui/material/Snackbar";
+import Stack from "@mui/material/Stack";
+import {
+  ContainerContacts,
+  NameInput,
+  UserContactInput,
+  MessageInput,
+  ContactsPhoto
+} from "./style";
 
 export const Contacts = () => {
   const [UserName, setUserName] = useState("");
@@ -29,19 +31,35 @@ export const Contacts = () => {
     setUserMessage(event.target.value);
   };
 
-  const [RequestType, setRequestType] = React.useState("");
+  const [RequestType, setRequestType] = useState("");
   const handleChangeRequestType = (event) => {
     setRequestType(event.target.value);
   };
 
-  const [FieldsNotEmpty, checkFields] = useState(false);
+  const [FieldsNotEmpty, setFieldsNotEmpty] = useState(false);
 
   const handleSend = () => {
     if (UserName && UserContact && UserMessage && RequestType) {
-      checkFields(true);
+      setFieldsNotEmpty(true);
+      handleClick(); // Показываем предупреждение после успешной отправки
     } else {
-      checkFields(false);
+      setFieldsNotEmpty(false);
     }
+  };
+
+  const Alert = React.forwardRef(function Alert(props, ref) {
+    return <MuiAlert elevation={6} ref={ref} variant="filled" {...props} />;
+  });
+
+  const [open, setOpen] = useState(false);
+  const handleClick = () => {
+    setOpen(true);
+  };
+  const handleClose = (event, reason) => {
+    if (reason === 'clickaway') {
+      return;
+    }
+    setOpen(false);
   };
 
   return (
@@ -68,7 +86,7 @@ export const Contacts = () => {
         rows={4}
       />
 
-      <FormControl >
+      <FormControl>
         <InputLabel>Dispatch Reason</InputLabel>
         <Select value={RequestType} onChange={handleChangeRequestType}>
           <MenuItem value={"work"}>Work Hiring</MenuItem>
@@ -77,14 +95,22 @@ export const Contacts = () => {
         </Select>
       </FormControl>
 
-      <Button variant="contained" onClick={handleSend}>Send</Button>
-      {FieldsNotEmpty ? (
-        <>
-          <Alert severity="success">Your message was successfully sent</Alert>
-        </>
-      ) : (
-        <Alert severity="error">You need to fill all fields</Alert>
-      )}
+      <Stack spacing={2} sx={{ width: '100%' }}>
+        <Button variant="contained" onClick={handleSend}>
+          Send
+        </Button>
+        <Snackbar open={open} autoHideDuration={6000} onClose={handleClose}>
+          {FieldsNotEmpty ? (
+            <Alert onClose={handleClose} severity="success" sx={{ width: '100%' }}>
+              Your message was successfully sent
+            </Alert>
+          ) : (
+            <Alert onClose={handleClose} severity="error" sx={{ width: '100%' }}>
+              You need to fill all fields
+            </Alert>
+          )}
+        </Snackbar>
+      </Stack>
 
       <ContactsPhoto />
     </ContainerContacts>
