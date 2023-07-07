@@ -12,12 +12,14 @@ import { ContainerHeader, StyledTab } from "./style.js";
 
 export const Header = () => {
 
-    const [listVisibility, setListVisibility] = useState(true);
+    const [listVisibility, setListVisibility] = useState(false);
     const toggleListVisibility = () => {setListVisibility(!listVisibility);};
-
+    const offListVisibility = () => {setListVisibility(false)};
+    
     const [color, setColor] = useState('one');
     const handleChangeColor = (event, newColor) => {
         setColor(newColor);
+        offListVisibility();
     };
 
   return (
@@ -34,31 +36,31 @@ export const Header = () => {
           <StyledTab value="three" label="Skills" component={Link} to="/Skills" />
           {listVisibility ?
           ( 
-          <StyledTab
-            value="four"
-            label="Projects"
-            component="button"
-            onClick={toggleListVisibility}
-          />)
-          :
-          (
-          <Box sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}>
+            <Box sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}>
             <nav>
                 <List>
-                    <ListItem disablePadding>
+                    <ListItem disablePadding component="a" href="https://github.com/Kamchatskiy/CV-Musaev">
                     <ListItemButton>
                         <ListItemText primary="CV Website" />
                     </ListItemButton>
                     </ListItem>
                     <ListItem disablePadding>
                     <ListItemButton>
-                        <ListItemText primary="Smth" />
+                        <ListItemText primary="Coming Soon..." />
                     </ListItemButton>
                     </ListItem>
                 </List>
             </nav>
             </Box>
-        )}
+          )
+          :(
+          <StyledTab
+            value="four"
+            label="Projects"
+            component="button"
+            onClick={toggleListVisibility} />
+          )
+        }
           <StyledTab value="five" label="Github" component="a" href="https://github.com/Kamchatskiy" target="_blank" rel="noopener noreferrer" />
           <StyledTab value="six" label="Contacts" component={Link} to="/Contacts" />
         </Tabs>
