@@ -1,0 +1,1 @@
+{"version":3,"file":"static/css/main.fcfecaa9.css","mappings":"gEAEA,KAEI,qBAAuB,CACvB,aAAc,CAFd,sBAGJ","sources":["style.css"],"sourcesContent":["@import url(https://fonts.googleapis.com/css?family=Share+Tech);\n\nbody {\n    font-family: \"Share Tech\";\n    background-color: black;\n    color: #00ebd4;\n}"],"names":[],"sourceRoot":""}
