@@ -49,6 +49,7 @@ export const Contacts = () => {
         label="Name"
         variant="outlined"
         value={UserName}
+        textColor="primary"
         onChange={handlerOnChangeUserNameInput}
       />
       <UserContactInput

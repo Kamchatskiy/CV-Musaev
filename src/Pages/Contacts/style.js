@@ -2,10 +2,12 @@ import styled from "styled-components";
 import TextField from '@mui/material/TextField';
 
 export const ContainerContacts = styled.div`
+  background-color: #20bde1;
+  color: #00ebd4;
   display: flex;
   flex-direction: column;
-  // align-items: left;
-  // justify-content: center;
+  height: 100%;
+  
   padding: 20px;
   gap: 16px;
 `;

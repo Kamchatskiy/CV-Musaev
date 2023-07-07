@@ -8,6 +8,7 @@ import {
 import { Header } from "./Components/Header";
 import { Footer } from "./Components/Footer";
 
+import { Main } from "./Pages/Main"
 import { Education } from "./Pages/Education"
 import { Skills } from "./Pages/Skills"
 import { Projects } from "./Pages/Projects"
@@ -19,7 +20,7 @@ export const App = () => {
       <BrowserRouter>
         <Header />
         <Routes path="/">
-          {/* <Route path="/" element={<Main />} /> */}
+          <Route path="/" element={<Main />} />
           <Route path="education" element={<Education />} />
           {/* <Route path="skills" element={<Skills />} /> */}
           {/* <Route path="projects" element={<Projects />} /> */}
