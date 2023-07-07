@@ -4,6 +4,7 @@ export const Main = () => {
     return (
         <ContainerMain>
             
+            <img src="../img/avatar.png" />
         </ContainerMain>
     )
 }
