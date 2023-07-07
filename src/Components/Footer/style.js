@@ -1,21 +1,19 @@
 import styled from "styled-components"
 
 export const ContainerFooter = styled.div`
-    height: 130px;
+    height: 100px;
     width: 100%;
 
-    margin-top: 100%;
+    position: absolute;
+    bottom: 0;
 
-    background-color: #000000;
-    color: #00ebd4;
+    text-align: center;
+    font-size: 35px;
 
-    text-align: centerw;
-    font-size: 45px;
-
-    border: 3px;
-    border-width: 5px;
-    border-style: dashed;
-
+    // border: 3px;
+    // border-width: 3px;
+    // border-style: dashed;
+    
     display: flex;
     align-items: center;
     justify-content: left;

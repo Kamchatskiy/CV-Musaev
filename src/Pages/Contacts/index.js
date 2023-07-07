@@ -4,6 +4,7 @@ import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
+import Alert from "@mui/material/Alert";
 import { 
         ContainerContacts, 
         NameInput, 
@@ -77,14 +78,12 @@ export const Contacts = () => {
       </FormControl>
 
       <Button variant="contained" onClick={handleSend}>Send</Button>
-
       {FieldsNotEmpty ? (
         <>
-          <h2>Your message was successfully sent</h2>
-          <img src="http://pm1.narvii.com/7415/7e99c3dfecb5b90330dcf550ef45dfddd44f7d6cr1-702-383v2_00.jpg" />
+          <Alert severity="success">Your message was successfully sent</Alert>
         </>
       ) : (
-        <h2>You need to fill all fields</h2>
+        <Alert severity="error">You need to fill all fields</Alert>
       )}
 
       <ContactsPhoto />

@@ -1,10 +1,11 @@
 import React from "react"
-import { ContainerMain } from "./style.js"
+import { ContainerMain, MyPicture } from "./style.js"
+import avatar from "./avatar.png"
+
 export const Main = () => {
     return (
         <ContainerMain>
-            
-            <img src="../img/avatar.png" />
+            <MyPicture src={avatar}/>
         </ContainerMain>
     )
 }
