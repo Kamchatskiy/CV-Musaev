@@ -5,8 +5,3 @@ https://fontawesome.com/icons/php?f=brands&s=solid //php
 //programming https://fontawesome.com/icons/code?f=classic&s=solid
 https://fontawesome.com/icons/c?f=classic&s=solid //c lang
 https://fontawesome.com/icons/java?f=brands&s=solid //java
-
-//cybersec
-https://fontawesome.com/icons/binary-lock?f=classic&s=solid //reverse
-https://fontawesome.com/icons/microchip?f=classic&s=solid //hardware
-*/
