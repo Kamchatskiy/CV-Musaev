@@ -9,6 +9,7 @@ import Switch from '@mui/material/Switch';
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faShieldAlt, faMicrochip, faGears } from "@fortawesome/free-solid-svg-icons";
+import { ContainerListRatings } from "../style";
 
 export const CyberSecurity = () => {
     const security_icon = <FontAwesomeIcon icon={faShieldAlt} style={{ color: "#00ebd4" }} />;
@@ -39,10 +40,12 @@ export const CyberSecurity = () => {
 
             {ratingVisible && (
                 <>
-                    <Typography component="legend">Reverse Engineering {reverse_icon}</Typography>
-                    <Rating value={2} size="large" readOnly />
-                    <Typography component="legend">Hardware Hacking {hardware_icon}</Typography>
-                    <Rating value={1} size="large" readOnly />
+                    <ContainerListRatings>
+                        <Typography component="legend">Reverse Engineering {reverse_icon}</Typography>
+                        <Rating value={2} size="large" readOnly />
+                        <Typography component="legend">Hardware Hacking {hardware_icon}</Typography>
+                        <Rating value={1} size="large" readOnly />
+                    </ContainerListRatings>
                 </>
             )}
         </>

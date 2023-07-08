@@ -1,7 +1,0 @@
-//backend https://fontawesome.com/icons/gear-complex-code?f=classic&s=solid
-https://fontawesome.com/icons/python?f=brands&s=solid //python
-https://fontawesome.com/icons/php?f=brands&s=solid //php
-
-//programming https://fontawesome.com/icons/code?f=classic&s=solid
-https://fontawesome.com/icons/c?f=classic&s=solid //c lang
-https://fontawesome.com/icons/java?f=brands&s=solid //java

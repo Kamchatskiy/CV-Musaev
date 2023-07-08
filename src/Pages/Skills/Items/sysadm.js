@@ -10,6 +10,7 @@ import Switch from '@mui/material/Switch';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faServer, faTerminal } from "@fortawesome/free-solid-svg-icons";
 import { faDocker, faGitAlt, faLinux, faWindows } from "@fortawesome/free-brands-svg-icons";
+import { ContainerListRatings } from "../style";
 
 export const SysAdm = () => {
     const sysadm_icon = <FontAwesomeIcon icon={faServer} style={{color: "#00ebd4",}} />
@@ -43,9 +44,10 @@ export const SysAdm = () => {
 
       {ratingVisible && (
         <>
+        <ContainerListRatings>
           <Typography component="legend">Linux {linux_icon}</Typography>
           <Rating value={4} size="large" readOnly />
-          <Typography component="legend">Sh|Bash {terminal_icon}</Typography>
+          <Typography component="legend">Sh | Bash {terminal_icon}</Typography>
           <Rating value={4} size="large" readOnly />
           <Typography component="legend">Docker {docker_icon}</Typography>
           <Rating value={3} size="large" readOnly />
@@ -53,6 +55,7 @@ export const SysAdm = () => {
           <Rating value={3} size="large" readOnly />
           <Typography component="legend">Windows {windows_icon}</Typography>
           <Rating value={3} size="large" readOnly />
+        </ContainerListRatings>
         </>
       )}
     </>

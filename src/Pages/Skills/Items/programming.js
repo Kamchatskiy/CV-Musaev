@@ -10,6 +10,7 @@ import Switch from '@mui/material/Switch';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faC, faCode } from "@fortawesome/free-solid-svg-icons";
 import { faJava, faPhp, faPython, faRust } from "@fortawesome/free-brands-svg-icons";
+import { ContainerListRatings } from "../style";
 
 export const Programming = () => {
     const code_icon = <FontAwesomeIcon icon={faCode} style={{color: "#00ebd4",}} />
@@ -43,7 +44,8 @@ export const Programming = () => {
 
       {ratingVisible && (
         <>
-          <Typography component="legend">C|C++ {c_icon}</Typography>
+        <ContainerListRatings>
+          <Typography component="legend">{c_icon} | {c_icon}++</Typography>
           <Rating value={4} size="large" readOnly />
           <Typography component="legend">Rust {rust_icon}</Typography>
           <Rating value={0} size="large" readOnly />
@@ -53,6 +55,7 @@ export const Programming = () => {
           <Rating value={0} size="large" readOnly />
           <Typography component="legend">PHP {php_icon}</Typography>
           <Rating value={0} size="large" readOnly />
+        </ContainerListRatings>
         </>
       )}
     </>

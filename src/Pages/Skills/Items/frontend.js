@@ -11,6 +11,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import { faWindowMaximize } from "@fortawesome/free-solid-svg-icons";
 import { faHtml5, faCss3Alt, faSquareJs, faReact } from "@fortawesome/free-brands-svg-icons";
+import { ContainerListRatings } from "../style";
 
 export const FrontEnd = () => {
     const frontend_icon = <FontAwesomeIcon icon={faWindowMaximize} style={{color: "#00ebd4",}} />
@@ -43,14 +44,16 @@ export const FrontEnd = () => {
 
       {ratingVisible && (
         <>
-          <Typography component="legend">HTML {html_icon}</Typography>
-          <Rating value={4} size="large" readOnly />
-          <Typography component="legend">CSS {css_icon}</Typography>
-          <Rating value={4} size="large" readOnly />
-          <Typography component="legend">JS {js_icon}</Typography>
-          <Rating value={3} size="large" readOnly />
-          <Typography component="legend">React {react_icon}</Typography>
-          <Rating value={2} size="large" readOnly />
+          <ContainerListRatings>
+            <Typography component="legend">HTML {html_icon}</Typography>
+            <Rating value={4} size="large" readOnly />
+            <Typography component="legend">CSS {css_icon}</Typography>
+            <Rating value={4} size="large" readOnly />
+            <Typography component="legend">JS {js_icon}</Typography>
+            <Rating value={3} size="large" readOnly />
+            <Typography component="legend">React {react_icon}</Typography>
+            <Rating value={2} size="large" readOnly />
+          </ContainerListRatings>
         </>
       )}
     </>
