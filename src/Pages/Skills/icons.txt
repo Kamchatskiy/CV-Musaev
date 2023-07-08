@@ -1,0 +1,19 @@
+//backend https://fontawesome.com/icons/gear-complex-code?f=classic&s=solid
+https://fontawesome.com/icons/python?f=brands&s=solid //python
+https://fontawesome.com/icons/php?f=brands&s=solid //php
+
+//programming https://fontawesome.com/icons/code?f=classic&s=solid
+https://fontawesome.com/icons/c?f=classic&s=solid //c lang
+https://fontawesome.com/icons/java?f=brands&s=solid //java
+
+//sysadm https://fontawesome.com/icons/server?f=classic&s=solid
+https://fontawesome.com/icons/terminal?f=classic&s=solid //terminal
+https://fontawesome.com/icons/linux?f=brands&s=solid //linux
+https://fontawesome.com/icons/windows?f=brands&s=solid //windows
+https://fontawesome.com/icons/docker?f=brands&s=solid //docker
+https://fontawesome.com/icons/code-branch?f=classic&s=solid //git
+
+//cybersec
+https://fontawesome.com/icons/binary-lock?f=classic&s=solid //reverse
+https://fontawesome.com/icons/microchip?f=classic&s=solid //hardware
+*/
