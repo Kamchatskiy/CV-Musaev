@@ -32,7 +32,7 @@ export const FrontEnd = () => {
           <ListItemIcon>
             <ListItemIcon>{frontend_icon}</ListItemIcon>
           </ListItemIcon>
-          <ListItemText primary="frontend" />
+          <ListItemText primary="FrontEnd" />
           <Switch
             edge="end"
             onChange={handleToggle}

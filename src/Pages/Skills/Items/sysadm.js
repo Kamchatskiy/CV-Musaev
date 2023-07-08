@@ -8,17 +8,16 @@ import ListItemText from '@mui/material/ListItemText';
 import Switch from '@mui/material/Switch';
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faServer, faTerminal } from "@fortawesome/free-solid-svg-icons";
+import { faDocker, faGitAlt, faLinux, faWindows } from "@fortawesome/free-brands-svg-icons";
 
-import { faWindowMaximize } from "@fortawesome/free-solid-svg-icons";
-import { faHtml5, faCss3Alt, faSquareJs, faReact } from "@fortawesome/free-brands-svg-icons";
-
-export const FrontEnd = () => {
+export const SysAdm = () => {
     const sysadm_icon = <FontAwesomeIcon icon={faServer} style={{color: "#00ebd4",}} />
     const linux_icon = <FontAwesomeIcon icon={faLinux} style={{color: "#00ebd4",}} />
     const terminal_icon = <FontAwesomeIcon icon={faTerminal} style={{color: "#00ebd4",}} />
     const windows_icon = <FontAwesomeIcon icon={faWindows} style={{color: "#00ebd4",}} />
     const docker_icon = <FontAwesomeIcon icon={faDocker} style={{color: "#00ebd4",}} />
-    const git_icon = <FontAwesomeIcon icon="fa-brands fa-git-alt" style={{color: "#00ebd4",}} />
+    const git_icon = <FontAwesomeIcon icon={faGitAlt} style={{color: "#00ebd4",}} />
 
     const [ratingVisible, setRatingVisible] = useState(false);
 
@@ -33,7 +32,7 @@ export const FrontEnd = () => {
           <ListItemIcon>
             <ListItemIcon>{}</ListItemIcon>
           </ListItemIcon>
-          <ListItemText primary="frontend" />
+          <ListItemText primary="SysAdm" />
           <Switch
             edge="end"
             onChange={handleToggle}
@@ -44,14 +43,16 @@ export const FrontEnd = () => {
 
       {ratingVisible && (
         <>
-          <Typography component="legend">HTML {html_icon}</Typography>
+          <Typography component="legend">Linux {linux_icon}</Typography>
           <Rating value={4} size="large" readOnly />
-          <Typography component="legend">CSS {css_icon}</Typography>
+          <Typography component="legend">Sh|Bash {terminal_icon}</Typography>
           <Rating value={4} size="large" readOnly />
-          <Typography component="legend">JS {js_icon}</Typography>
+          <Typography component="legend">Docker {docker_icon}</Typography>
           <Rating value={3} size="large" readOnly />
-          <Typography component="legend">React {react_icon}</Typography>
-          <Rating value={2} size="large" readOnly />
+          <Typography component="legend">Git {git_icon}</Typography>
+          <Rating value={3} size="large" readOnly />
+          <Typography component="legend">Windows {windows_icon}</Typography>
+          <Rating value={3} size="large" readOnly />
         </>
       )}
     </>
