@@ -30,7 +30,7 @@ export const SysAdm = () => {
       <List sx={{ width: '100%', maxWidth: 360 }}>
         <ListItem>
           <ListItemIcon>
-            <ListItemIcon>{}</ListItemIcon>
+            <ListItemIcon>{sysadm_icon}</ListItemIcon>
           </ListItemIcon>
           <ListItemText primary="SysAdm" />
           <Switch
