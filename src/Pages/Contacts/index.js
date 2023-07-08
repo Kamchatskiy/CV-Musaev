@@ -8,6 +8,7 @@ import MuiAlert from '@mui/material/Alert';
 import Snackbar from "@mui/material/Snackbar";
 import Stack from "@mui/material/Stack";
 import {ContainerContacts, NameInput, UserContactInput, MessageInput, ContactsPhoto} from "./style";
+import { color } from "@mui/system";
 
 export const Contacts = () => {
     const [UserName,
@@ -67,23 +68,35 @@ export const Contacts = () => {
             <NameInput
                 label="Name"
                 variant="outlined"
+                style={{
+                    backgroundColor: "#00ebd4"
+                }}
                 value={UserName}
                 textColor="primary"
                 onChange={handlerOnChangeUserNameInput}/>
             <UserContactInput
                 label="Email/Telegram/PhoneNumber"
                 variant="outlined"
+                style={{
+                    backgroundColor: "#00ebd4"
+                }}
                 value={UserContact}
                 onChange={handlerOnChangeUserContactInput}/>
             <MessageInput
                 label="Message"
                 variant="outlined"
+                style={{
+                    backgroundColor: "#00ebd4"
+                }}
                 value={UserMessage}
                 onChange={handlerOnChangeUserMessageInput}
                 multiline
                 rows={4}/>
 
-            <FormControl>
+            <FormControl
+            sx={{
+                width: '16%'
+            }}>
                 <InputLabel>Dispatch Reason</InputLabel>
                 <Select value={RequestType} onChange={handleChangeRequestType}>
                     <MenuItem value={"work"}>Work Hiring</MenuItem>
@@ -95,9 +108,18 @@ export const Contacts = () => {
             <Stack spacing={2} sx={{
                 width: '100%'
             }}>
-                <Button variant="contained" onClick={handleSend}>
+                <Button 
+                variant="contained" 
+                style={{
+                    backgroundColor: "#00ebd4",
+                    textColor: "#000000"
+                }}
+                sx={{ width: '16%' }}
+                onClick={handleSend}
+                >
                     Send
                 </Button>
+
                 <Snackbar open={open} autoHideDuration={6000} onClose={handleClose}>
                     {FieldsNotEmpty
                         ? (

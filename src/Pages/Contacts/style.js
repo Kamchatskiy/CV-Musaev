@@ -2,7 +2,6 @@ import styled from "styled-components";
 import TextField from '@mui/material/TextField';
 
 export const ContainerContacts = styled.div`
-  background-color: #00ebd4;
   display: flex;
   flex-direction: column;
   height: 100%;

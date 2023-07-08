@@ -1,7 +1,7 @@
 страницы:
     main
     education (дописать json файл и написать парсер)
-    skills (с диаграммами https://uber.github.io/react-vis)
+    skills (корректная стилизация)
     contacts (стилизация)
     header (стилизация селектора)
     footer (добавить еще чего-нибудь)
