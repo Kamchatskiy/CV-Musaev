@@ -1,5 +1,7 @@
 import styled from "styled-components"
 import Tab from '@mui/material/Tab';
+import ListItem from '@mui/material/ListItem';
+
 
 export const ContainerHeader = styled.div`
   height: 150px;
@@ -12,4 +14,10 @@ export const ContainerHeader = styled.div`
 
 export const StyledTab = styled(Tab)`
   flex: 1;
+  font-size: 40px;
 ;`
+
+export const StyledLink = styled(ListItem)`
+  text-decoration: none;
+  color: #00ebd4;
+`

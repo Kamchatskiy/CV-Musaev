@@ -7,7 +7,7 @@ import ListItemText from '@mui/material/ListItemText';
 import Tabs from '@mui/material/Tabs';
 import Box from "@mui/system/Box";
 
-import { ContainerHeader, StyledTab } from "./style.js";
+import { ContainerHeader, StyledTab, StyledLink } from "./style.js";
 
 export const Header = () => {
 
@@ -38,11 +38,14 @@ export const Header = () => {
             <Box sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}>
             <nav>
                 <List>
-                    <ListItem disablePadding component="a" href="https://github.com/Kamchatskiy/CV-Musaev">
+                    <StyledLink disablePadding 
+                    component="a" href="https://github.com/Kamchatskiy/CV-Musaev" 
+                    target="_blank" rel="noopener noreferrer" >
                     <ListItemButton>
                         <ListItemText primary="CV Website" />
                     </ListItemButton>
-                    </ListItem>
+                    </StyledLink>
+                    
                     <ListItem disablePadding>
                     <ListItemButton>
                         <ListItemText primary="Coming Soon..." />
