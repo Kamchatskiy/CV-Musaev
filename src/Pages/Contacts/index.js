@@ -68,7 +68,7 @@ export const Contacts = () => {
             <NameInput
                 label="Name"
                 variant="outlined"
-                style={{
+                sx={{
                     backgroundColor: "#00ebd4"
                 }}
                 value={UserName}
@@ -77,7 +77,7 @@ export const Contacts = () => {
             <UserContactInput
                 label="Email/Telegram/PhoneNumber"
                 variant="outlined"
-                style={{
+                sx={{
                     backgroundColor: "#00ebd4"
                 }}
                 value={UserContact}
@@ -85,7 +85,7 @@ export const Contacts = () => {
             <MessageInput
                 label="Message"
                 variant="outlined"
-                style={{
+                sx={{
                     backgroundColor: "#00ebd4"
                 }}
                 value={UserMessage}
@@ -98,7 +98,11 @@ export const Contacts = () => {
                 width: '16%'
             }}>
                 <InputLabel>Dispatch Reason</InputLabel>
-                <Select value={RequestType} onChange={handleChangeRequestType}>
+                <Select 
+                sx={{ backgroundColor: "#00ebd4" }}
+                value={RequestType} 
+                onChange={handleChangeRequestType}
+                >
                     <MenuItem value={"work"}>Work Hiring</MenuItem>
                     <MenuItem value={"outsource"}>Outsource Order</MenuItem>
                     <MenuItem value={"other"}>Other</MenuItem>
@@ -110,11 +114,10 @@ export const Contacts = () => {
             }}>
                 <Button 
                 variant="contained" 
-                style={{
+                sx={{
+                    width: '16%',
                     backgroundColor: "#00ebd4",
-                    textColor: "#000000"
                 }}
-                sx={{ width: '16%' }}
                 onClick={handleSend}
                 >
                     Send
