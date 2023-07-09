@@ -9,15 +9,11 @@ export const ContainerFooter = styled.div`
 
     text-align: center;
     font-size: 35px;
-
-    // border: 3px;
-    // border-width: 3px;
-    // border-style: dashed;
     
     display: flex;
     align-items: center;
     justify-content: left;
-`;
+`
 
 export const CustomUl = styled.ul`
     display: flex;

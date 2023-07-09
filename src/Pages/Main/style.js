@@ -1,9 +1,9 @@
-import styled from "styled-components";
+import styled from "styled-components"
 
 export const ContainerMain = styled.div`
     height: 700px;
     width: 100%;
-`;
+`
 
 export const MyPicture = styled.img`
     height: 80%;
