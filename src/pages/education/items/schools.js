@@ -1,7 +1,7 @@
 import React from "react"
 import ListItemButton from "@mui/material/ListItemButton"
 import ListItemText from "@mui/material/ListItemText"
-import { Container } from "@mui/system"
+import Container from "@mui/system/Container"
 
 export const Schools = () => {
 	return (

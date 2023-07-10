@@ -3,6 +3,7 @@ import { SubList } from "./components"
 import { ContainerEducation } from "./style"
 import { Schools } from "./items/schools"
 import { Works } from "./items/works"
+import { MSHP } from "./items/mshp"
 
 export const Education = () => {
 	return (
@@ -13,6 +14,9 @@ export const Education = () => {
 			<SubList
 				Name="Works"
 				SubItems={[<Works key="works" />]} />
+			<SubList
+				Name="MSHP"
+				SubItems={[<MSHP key="mshp" />]} />
 		</ContainerEducation>
 	)
 }
