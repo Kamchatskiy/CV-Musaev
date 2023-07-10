@@ -1,16 +1,13 @@
 import React from "react"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faInstagram, faVk, faTelegram, faYoutube, faGithub } from "@fortawesome/free-brands-svg-icons"
-
 import { ContainerFooter, CustomUl, SocialLink } from "./style.js"
-
 
 const instagram = <FontAwesomeIcon icon={faInstagram} />
 const youtube = <FontAwesomeIcon icon={faYoutube} />
 const telegram = <FontAwesomeIcon icon={faTelegram} />
 const vk = <FontAwesomeIcon icon={faVk} />
 const github = <FontAwesomeIcon icon={faGithub} />
-
 
 export const Footer = () => {
 	return (

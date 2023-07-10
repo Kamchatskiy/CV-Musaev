@@ -4,14 +4,12 @@ import {
 	Route,
 	BrowserRouter,
 } from "react-router-dom"
-
-import { Header } from "./Components/Header"
-import { Footer } from "./Components/Footer"
-
-import { Main } from "./Pages/Main"
-import { Education } from "./Pages/Education"
-import { Skills } from "./Pages/Skills"
-import { Contacts } from "./Pages/Contacts"
+import { Header } from "./components/header"
+import { Footer } from "./components/footer"
+import { Main } from "./pages/main"
+import { Education } from "./pages/education"
+import { Skills } from "./pages/skills"
+import { Contacts } from "./pages/contacts"
 
 export const App = () => {
 	return (
