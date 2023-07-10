@@ -40,10 +40,16 @@ export const Header = () => {
 								bgcolor: "background.paper"
 							}}>
 								<nav>
-									<List>
+									<List
+										sx={{
+											textAlign: "center"
+										}}>
 										<StyledLink disablePadding
-											component="a" href="https://github.com/Kamchatskiy/CV-Musaev"
-											target="_blank" rel="noopener noreferrer" >
+											component="a"
+											href="https://github.com/Kamchatskiy/CV-Musaev"
+											target="_blank"
+											rel="noopener noreferrer"
+										>
 											<ListItemButton>
 												<ListItemText primary="CV Website" />
 											</ListItemButton>
@@ -69,7 +75,7 @@ export const Header = () => {
 					<StyledTab value="five" label="Github" component="a" href="https://github.com/Kamchatskiy" target="_blank" rel="noopener noreferrer" />
 					<StyledTab value="six" label="Contacts" component={Link} to="/Contacts" />
 				</Tabs>
-			</Box>
-		</ContainerHeader>
+			</Box >
+		</ContainerHeader >
 	)
 }

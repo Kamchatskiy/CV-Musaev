@@ -1,0 +1,17 @@
+[
+	{
+		"category": "Courses",
+		"items": [
+			{
+				"title": "MIPT Summer School - InfoSecurity",
+				"duration": "2 weeks",
+				"certificate": ""
+			},
+			{
+				"title": "HSE Software Engineering Summer School - Web Development",
+				"duration": "9 days",
+				"certificate": ""
+			}
+		]
+	}
+]
