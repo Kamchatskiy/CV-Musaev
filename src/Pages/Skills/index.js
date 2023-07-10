@@ -105,25 +105,25 @@ export const Skills = () => {
 		<ContainerSkills>
 			
 			<Skill
-				text="Programming"
+				title="Programming"
 				icon={<FontAwesomeIcon icon={faCode} style={{ color: "#00ebd4" }} />}
 				array={arrayProgramming}
 			/>
 
 			<Skill
-				text="FrontEnd"
+				title="FrontEnd"
 				icon={<FontAwesomeIcon icon={faWindowMaximize} style={{ color: "#00ebd4" }} />}
 				array={arrayFrontEnd}
 			/>
 
 			<Skill
-				text="DevOps & SysAdm"
+				title="DevOps & SysAdm"
 				icon={<FontAwesomeIcon icon={faServer} style={{ color: "#00ebd4", }} />}
 				array={arraySysAdm}
 			/>
 
 			<Skill
-				text="CyberSecurity"
+				title="CyberSecurity"
 				icon={<FontAwesomeIcon icon={faShieldAlt} style={{ color: "#00ebd4", }} />}
 				array={arrayCyberSecurity}
 			/>
