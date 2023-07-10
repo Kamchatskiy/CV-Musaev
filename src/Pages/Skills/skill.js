@@ -26,28 +26,28 @@ export const Skill = ({ title, icon, array }) => {
 						edge="end"
 						onChange={handleToggle}
 						checked={ratingVisible}
-						sx={{ 
+						sx={{
 							backgroundColor: "#00ebd4",
 							borderRadius: 30
 						}}
 					/>
 				</ListItem>
-			</List>
 
-			{ratingVisible && (
-				<>
-					<ContainerListRatings>
-						{array.map((item) => (
-							<div key={item.text}>
-								<Typography component="legend">
-									{item.text} {item.icon}
-								</Typography>
-								<Rating value={item.rating} size="large" readOnly />
-							</div>
-						))}
-					</ContainerListRatings>
-				</>
-			)}
+				{ratingVisible && (
+					<ListItem>
+						<ContainerListRatings>
+							{array.map((item) => (
+								<div key={item.text}>
+									<Typography component="legend">
+										{item.text} {item.icon}
+									</Typography>
+									<Rating value={item.rating} size="large" readOnly />
+								</div>
+							))}
+						</ContainerListRatings>
+					</ListItem>
+				)}
+			</List>
 		</>
 	)
 }
@@ -59,7 +59,7 @@ Skill.propTypes = {
 		PropTypes.shape({
 			text: PropTypes.string.isRequired,
 			icon: PropTypes.element.isRequired,
-			rating: PropTypes.number.isRequired,
+			rating: PropTypes.number.isRequired
 		})
-	).isRequired,
+	).isRequired
 }

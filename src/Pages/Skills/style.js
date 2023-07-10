@@ -6,6 +6,6 @@ export const ContainerSkills = styled.div`
     gap: 10px;
 `
 export const ContainerListRatings = styled.div`
-    display: flex;
-    flex-direction: column;
+    // display: flex;
+    // flex-direction: column;
 `

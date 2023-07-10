@@ -40,7 +40,7 @@ export const Contacts = () => {
 	const handleSend = () => {
 		if (UserName && UserContact && UserMessage && RequestType) {
 			setFieldsNotEmpty(true)
-			handleClick() // Показываем предупреждение после успешной отправки
+			handleClick() 
 		} else {
 			setFieldsNotEmpty(false)
 		}

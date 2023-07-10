@@ -103,7 +103,7 @@ export const Skills = () => {
 
 	return (
 		<ContainerSkills>
-			
+
 			<Skill
 				title="Programming"
 				icon={<FontAwesomeIcon icon={faCode} style={{ color: "#00ebd4" }} />}
