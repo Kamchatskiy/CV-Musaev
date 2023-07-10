@@ -18,8 +18,12 @@ export const Skill = ({ title, icon, array }) => {
 
 	return (
 		<>
-			<List sx={{ width: "100%", maxWidth: 360 }}>
-				<ListItem>
+			<List sx={{ width: "100%" }}>
+				<ListItem
+					sx={{
+						border: 1,
+						borderColor: "#00ebd4"
+					}}>
 					<ListItemIcon>{icon}</ListItemIcon>
 					<ListItemText primary={title} />
 					<Switch
@@ -34,7 +38,12 @@ export const Skill = ({ title, icon, array }) => {
 				</ListItem>
 
 				{ratingVisible && (
-					<ListItem>
+					<ListItem
+						sx={{
+							height: "100%",
+							border: 1,
+							borderColor: "#00ebd4"
+						}}>
 						<ContainerListRatings>
 							{array.map((item) => (
 								<div key={item.text}>
