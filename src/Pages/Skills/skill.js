@@ -22,7 +22,15 @@ export const Skill = ({ title, icon, array }) => {
 				<ListItem>
 					<ListItemIcon>{icon}</ListItemIcon>
 					<ListItemText primary={title} />
-					<Switch edge="end" onChange={handleToggle} checked={ratingVisible} />
+					<Switch
+						edge="end"
+						onChange={handleToggle}
+						checked={ratingVisible}
+						sx={{ 
+							backgroundColor: "#00ebd4",
+							borderRadius: 30
+						}}
+					/>
 				</ListItem>
 			</List>
 

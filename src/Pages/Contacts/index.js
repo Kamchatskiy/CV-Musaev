@@ -68,7 +68,8 @@ export const Contacts = () => {
 				label="Name"
 				variant="outlined"
 				sx={{
-					backgroundColor: "#00ebd4"
+					backgroundColor: "#00ebd4",
+					borderRadius: 30
 				}}
 				value={UserName}
 				textColor="primary"
@@ -77,7 +78,8 @@ export const Contacts = () => {
 				label="Email/Telegram/PhoneNumber"
 				variant="outlined"
 				sx={{
-					backgroundColor: "#00ebd4"
+					backgroundColor: "#00ebd4",
+					borderRadius: 30
 				}}
 				value={UserContact}
 				onChange={handlerOnChangeUserContactInput} />
@@ -85,7 +87,8 @@ export const Contacts = () => {
 				label="Message"
 				variant="outlined"
 				sx={{
-					backgroundColor: "#00ebd4"
+					backgroundColor: "#00ebd4",
+					borderRadius: 10
 				}}
 				value={UserMessage}
 				onChange={handlerOnChangeUserMessageInput}
@@ -98,7 +101,10 @@ export const Contacts = () => {
 				}}>
 				<InputLabel>Dispatch Reason</InputLabel>
 				<Select
-					sx={{ backgroundColor: "#00ebd4" }}
+					sx={{
+						backgroundColor: "#00ebd4",
+						borderRadius: 30,
+					}}
 					value={RequestType}
 					onChange={handleChangeRequestType}
 				>
@@ -116,6 +122,8 @@ export const Contacts = () => {
 					sx={{
 						width: "16%",
 						backgroundColor: "#00ebd4",
+						borderRadius: 30,
+						color: "black"
 					}}
 					onClick={handleSend}
 				>

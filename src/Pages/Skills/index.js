@@ -10,7 +10,7 @@ export const Skills = () => {
 
 	const arrayProgramming = [
 		{
-			text: "C",
+			text: "",
 			icon: <FontAwesomeIcon icon={faC} style={{ color: "#00ebd4", }} />,
 			rating: 3
 		},
