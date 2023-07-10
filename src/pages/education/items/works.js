@@ -6,7 +6,11 @@ import Container from "@mui/system/Container"
 export const Works = () => {
 	return (
 		<>
-			<Container>
+			<Container
+				sx={{
+					display: "flex"
+				}}
+			>
 				<ListItemText
 					primary="Dutch Store IkwordMama (August-September 2021)"
 					secondary="Internship (not connected with Programming)"

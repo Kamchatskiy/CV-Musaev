@@ -22,7 +22,9 @@ export const Header = () => {
 
 	return (
 		<ContainerHeader>
-			<Box sx={{ width: "100%" }}>
+			<Box sx={{
+				width: "100%"
+			}}>
 				<Tabs
 					onChange={handleChangeTab}
 					value={color}
@@ -36,14 +38,11 @@ export const Header = () => {
 						(
 							<Box sx={{
 								width: "100%",
-								maxWidth: 360,
+								maxWidth: 150,
 								bgcolor: "background.paper"
 							}}>
 								<nav>
-									<List
-										sx={{
-											textAlign: "center"
-										}}>
+									<List>
 										<StyledLink disablePadding
 											component="a"
 											href="https://github.com/Kamchatskiy/CV-Musaev"

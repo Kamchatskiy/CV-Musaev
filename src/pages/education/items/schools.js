@@ -1,15 +1,14 @@
 import React from "react"
 import ListItemButton from "@mui/material/ListItemButton"
 import ListItemText from "@mui/material/ListItemText"
-import Container from "@mui/system/Container"
+import { Container } from "@mui/system"
 
 export const Schools = () => {
 	return (
 		<>
 			<Container
-				sx={{
-					display: "flex",
-				}}>
+				sx={{ display: "flex" }}
+			>
 				<ListItemText primary="Moscow School 1239 (2014-2022)" />
 				<ListItemButton
 					component="a"
@@ -18,7 +17,6 @@ export const Schools = () => {
 						textAlign: "center",
 						backgroundColor: "#00ebd4",
 						color: "#000000",
-						width: "100%"
 					}}
 				>
 					<ListItemText primary="Visit (RU)" />
@@ -26,11 +24,8 @@ export const Schools = () => {
 			</Container>
 
 			<Container
-				sx={{
-					display: "flex",
-				}}
+				sx={{ display: "flex" }}
 			>
-
 				<ListItemText primary="Moscow HSE Lyceum (2022-Now)" />
 				<ListItemButton
 					component="a"
@@ -39,7 +34,6 @@ export const Schools = () => {
 						textAlign: "center",
 						backgroundColor: "#00ebd4",
 						color: "#000000",
-						width: "50%"
 					}}
 				>
 					<ListItemText primary="Visit (RU)" />
@@ -51,7 +45,6 @@ export const Schools = () => {
 						textAlign: "center",
 						backgroundColor: "#00ebd4",
 						color: "#000000",
-						width: "50%"
 					}}
 				>
 					<ListItemText primary="Visit (EN)" />

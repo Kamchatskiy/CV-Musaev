@@ -1,8 +1,8 @@
 import React from "react"
 import { SubList } from "./components"
 import { ContainerEducation } from "./style"
-import { Schools } from "./data/schools"
-import { Works } from "./data/works"
+import { Schools } from "./items/schools"
+import { Works } from "./items/works"
 
 export const Education = () => {
 	return (
