@@ -1,4 +1,5 @@
-import React from "react"
+import React, { useEffect } from "react"
+import anime from "animejs"
 import List from "@mui/material/List"
 import ListItemButton from "@mui/material/ListItemButton"
 import ListItemText from "@mui/material/ListItemText"
@@ -19,6 +20,16 @@ export const SubList = ({ Name, SubItems }) => {
 		SubItems: PropTypes.element.isRequired,
 	}
 
+	useEffect(() => {
+		anime({
+			targets: ".item",
+			opacity: [0, 1],
+			translateY: [-300, 0],
+			duration: 1500,
+			easing: "easeInOutQuad",
+		})
+	}, [])
+
 	return (
 		<>
 			<List
@@ -28,6 +39,7 @@ export const SubList = ({ Name, SubItems }) => {
 					borderColor: "#00ebd4",
 				}}
 				component="nav"
+				className="item"
 			>
 				<ListItemButton onClick={handleClick}>
 					<ListItemText primary={Name} />

@@ -10,6 +10,19 @@ import Switch from "@mui/material/Switch"
 import { ContainerListRatings } from "./style"
 
 export const Skill = ({ title, icon, array }) => {
+
+	Skill.propTypes = {
+		title: PropTypes.string.isRequired,
+		icon: PropTypes.element.isRequired,
+		array: PropTypes.arrayOf(
+			PropTypes.shape({
+				text: PropTypes.string.isRequired,
+				icon: PropTypes.element.isRequired,
+				rating: PropTypes.number.isRequired
+			})
+		).isRequired
+	}
+
 	const [ratingVisible, setRatingVisible] = useState(false)
 
 	const handleToggle = () => {
@@ -18,7 +31,10 @@ export const Skill = ({ title, icon, array }) => {
 
 	return (
 		<>
-			<List sx={{ width: "100%" }}>
+			<List
+				sx={{ width: "100%" }}
+				className="item"
+			>
 				<ListItem
 					sx={{
 						border: 1,
@@ -59,16 +75,4 @@ export const Skill = ({ title, icon, array }) => {
 			</List>
 		</>
 	)
-}
-
-Skill.propTypes = {
-	title: PropTypes.string.isRequired,
-	icon: PropTypes.element.isRequired,
-	array: PropTypes.arrayOf(
-		PropTypes.shape({
-			text: PropTypes.string.isRequired,
-			icon: PropTypes.element.isRequired,
-			rating: PropTypes.number.isRequired
-		})
-	).isRequired
 }

@@ -11,7 +11,8 @@ export const Education = () => {
 		<ContainerEducation>
 			<SubList
 				Name="Schools"
-				SubItems={[<Schools key="schools" />]} />
+				SubItems={[<Schools key="schools" />]}
+			/>
 			<SubList
 				Name="Courses"
 				SubItems={[<Courses key="courses" />]} />
