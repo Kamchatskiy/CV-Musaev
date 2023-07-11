@@ -1,55 +1,63 @@
 import React from "react"
-import ListItemButton from "@mui/material/ListItemButton"
 import ListItemText from "@mui/material/ListItemText"
-import Container from "@mui/system/Container"
+import Stack from "@mui/material/Stack"
+import Button from "@mui/material/Button"
 
 export const Schools = () => {
 	return (
 		<>
-			<Container
-				sx={{ display: "flex" }}
-			>
+			<Stack direction="row" alignItems="center" spacing={2}>
 				<ListItemText primary="Moscow School 1239 (2014-2022)" />
-				<ListItemButton
+
+				<Button
+					variant="contained"
 					component="a"
 					href="https://coc1239.mskobr.ru/"
+					target="_blank"
+					rel="noopener noreferrer"
 					sx={{
-						textAlign: "center",
 						backgroundColor: "#00ebd4",
 						color: "#000000",
+						minWidth: "120px",
 					}}
 				>
-					<ListItemText primary="Visit (RU)" />
-				</ListItemButton>
-			</Container>
+					Visit (RU)
+				</Button>
+			</Stack>
 
-			<Container
-				sx={{ display: "flex" }}
-			>
+			<Stack direction="row" alignItems="center" spacing={2}>
 				<ListItemText primary="Moscow HSE Lyceum (2022-Now)" />
-				<ListItemButton
+
+				<Button
+					variant="contained"
 					component="a"
 					href="https://school.hse.ru/ru/"
+					target="_blank"
+					rel="noopener noreferrer"
 					sx={{
-						textAlign: "center",
 						backgroundColor: "#00ebd4",
 						color: "#000000",
+						minWidth: "120px",
 					}}
 				>
-					<ListItemText primary="Visit (RU)" />
-				</ListItemButton>
-				<ListItemButton
+					Visit (RU)
+				</Button>
+
+				<Button
+					variant="contained"
 					component="a"
 					href="https://school.hse.ru/en/"
+					target="_blank"
+					rel="noopener noreferrer"
 					sx={{
-						textAlign: "center",
 						backgroundColor: "#00ebd4",
 						color: "#000000",
+						minWidth: "120px",
 					}}
 				>
-					<ListItemText primary="Visit (EN)" />
-				</ListItemButton>
-			</Container>
+					Visit (EN)
+				</Button>
+			</Stack>
 		</>
 	)
 }

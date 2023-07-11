@@ -11,14 +11,18 @@ export const MSHP = () => {
 				<Stack
 					key={course.title}
 					direction="row"
-					alignItems="center"
+					alignItems="flex-start"
 					spacing={2}
 				>
 					<ListItemText primary={course.title} />
-					<ListItemText>
-                        Duration: {course.duration}
-                        Mark: {course.mark}
-					</ListItemText>
+					<Stack direction="column">
+						<ListItemText>
+							Duration: {course.duration}
+						</ListItemText>
+						<ListItemText>
+							Mark: {course.mark}
+						</ListItemText>
+					</Stack>
 					<Button
 						variant="contained"
 						target="_blank"
@@ -29,7 +33,7 @@ export const MSHP = () => {
 							minWidth: "120px",
 						}}
 					>
-                        Certificate
+						Certificate
 					</Button>
 				</Stack>
 			))}

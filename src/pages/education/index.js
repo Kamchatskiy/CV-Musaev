@@ -12,11 +12,11 @@ export const Education = () => {
 				Name="Schools"
 				SubItems={[<Schools key="schools" />]} />
 			<SubList
-				Name="Works"
-				SubItems={[<Works key="works" />]} />
-			<SubList
 				Name="MSHP"
 				SubItems={[<MSHP key="mshp" />]} />
+			<SubList
+				Name="Works"
+				SubItems={[<Works key="works" />]} />
 		</ContainerEducation>
 	)
 }

@@ -1,32 +1,32 @@
 import React from "react"
-import ListItemButton from "@mui/material/ListItemButton"
 import ListItemText from "@mui/material/ListItemText"
-import Container from "@mui/system/Container"
+import Stack from "@mui/material/Stack"
+import Button from "@mui/material/Button"
 
 export const Works = () => {
 	return (
 		<>
-			<Container
-				sx={{
-					display: "flex"
-				}}
-			>
+			<Stack direction="row" alignItems="center" spacing={2}>
 				<ListItemText
 					primary="Dutch Store IkwordMama (August-September 2021)"
 					secondary="Internship (not connected with Programming)"
 				/>
-				<ListItemButton
+
+				<Button
+					variant="contained"
 					component="a"
 					href="https://www.ikwordmama.nl/"
+					target="_blank"
+					rel="noopener noreferrer"
 					sx={{
-						textAlign: "center",
 						backgroundColor: "#00ebd4",
 						color: "#000000",
+						minWidth: "120px",
 					}}
 				>
-					<ListItemText primary="Link" />
-				</ListItemButton>
-			</Container>
+					Link
+				</Button>
+			</Stack>
 		</>
 	)
 }
