@@ -2,14 +2,11 @@ add anime.js
 
 страницы:
     main 
-    education (вынести стилизацию в отдельный файл и доделать другие секторы)
-    skills (корректная стилизация)
     contacts (стилизация)
-    header (стилизация селектора)
-    footer (добавить большой телефон)
+    footer (добавить чего-нибудь)
 
 сервер:
-    донастроить синхронизацию при наличии изменений в ветке {git fetch --dry-run}
+    донастроить синхронизацию при наличии изменений в ветке
     переделать выкачку файлов (только build вместо всего репо)
     купить домен
     https://www.reg.ru/buy/domain?query=musaev&place_of_order=domain-new-page&_csrf=295e42e158ce61550843f751a6f68cc1
@@ -21,3 +18,6 @@ add anime.js
 https://mui.com/material-ui/customization/color/#picking-colors
 
 сделать анимации с текстом (подсвечивание, мелькание и тд)
+
+In future:
+add multiple languages (https://www.i18next.com/)
