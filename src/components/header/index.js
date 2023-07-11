@@ -1,5 +1,5 @@
-import React, { useState } from "react"
-import { Link } from "react-router-dom"
+import React, { useState, useEffect } from "react"
+import { Link, useLocation } from "react-router-dom"
 import List from "@mui/material/List"
 import ListItem from "@mui/material/ListItem"
 import ListItemButton from "@mui/material/ListItemButton"
@@ -9,72 +9,106 @@ import Box from "@mui/system/Box"
 import { ContainerHeader, StyledTab, StyledLink } from "./style.js"
 
 export const Header = () => {
-
 	const [listVisibility, setListVisibility] = useState(false)
-	const toggleListVisibility = () => { setListVisibility(!listVisibility) }
-	const offListVisibility = () => { setListVisibility(false) }
+	const toggleListVisibility = () => {
+		setListVisibility(!listVisibility)
+	}
+	const offListVisibility = () => {
+		setListVisibility(false)
+	}
 
-	const [color, setColor] = useState("one")
-	const handleChangeTab = (event, newColor) => {
-		setColor(newColor)
+	const location = useLocation()
+	const [activeTab, setActiveTab] = useState("")
+
+	useEffect(() => {
+		setActiveTab(location.pathname)
+	}, [location.pathname])
+
+	const handleChangeTab = (event, newTab) => {
+		setActiveTab(newTab)
 		offListVisibility()
 	}
 
 	return (
 		<ContainerHeader>
-			<Box sx={{
-				width: "100%"
-			}}>
+			<Box
+				sx={{
+					width: "100%",
+				}}
+			>
 				<Tabs
 					onChange={handleChangeTab}
-					value={color}
+					value={activeTab}
 					textColor="one"
 					indicatorColor="primary"
 				>
-					<StyledTab value="one" label="Main" component={Link} to="/" />
-					<StyledTab value="two" label="Education" component={Link} to="/Education" />
-					<StyledTab value="three" label="Skills" component={Link} to="/Skills" />
-					{listVisibility ?
-						(
-							<Box sx={{
+					<StyledTab value="/" label="Main" component={Link} to="/" />
+					<StyledTab
+						value="/Education"
+						label="Education"
+						component={Link}
+						to="/Education"
+					/>
+					<StyledTab
+						value="/Skills"
+						label="Skills"
+						component={Link}
+						to="/Skills"
+					/>
+					{listVisibility ? (
+						<Box
+							sx={{
 								width: "100%",
 								maxWidth: 150,
-								bgcolor: "background.paper"
-							}}>
-								<nav>
-									<List>
-										<StyledLink disablePadding
-											component="a"
-											href="https://github.com/Kamchatskiy/CV-Musaev"
-											target="_blank"
-											rel="noopener noreferrer"
-										>
-											<ListItemButton>
-												<ListItemText primary="CV Website" />
-											</ListItemButton>
-										</StyledLink>
+								bgcolor: "background.paper",
+							}}
+						>
+							<nav>
+								<List>
+									<StyledLink
+										disablePadding
+										component="a"
+										href="https://github.com/Kamchatskiy/CV-Musaev"
+										target="_blank"
+										rel="noopener noreferrer"
+									>
+										<ListItemButton>
+											<ListItemText primary="CV Website" />
+										</ListItemButton>
+									</StyledLink>
 
-										<ListItem disablePadding>
-											<ListItemButton>
-												<ListItemText primary="Coming Soon..." />
-											</ListItemButton>
-										</ListItem>
-									</List>
-								</nav>
-							</Box>
-						)
-						: (
-							<StyledTab
-								value="four"
-								label="Projects"
-								component="button"
-								onClick={toggleListVisibility} />
-						)
-					}
-					<StyledTab value="five" label="Github" component="a" href="https://github.com/Kamchatskiy" target="_blank" rel="noopener noreferrer" />
-					<StyledTab value="six" label="Contacts" component={Link} to="/Contacts" />
+									<ListItem disablePadding>
+										<ListItemButton>
+											<ListItemText primary="Coming Soon..." />
+										</ListItemButton>
+									</ListItem>
+								</List>
+							</nav>
+						</Box>
+					) : (
+						<StyledTab
+							value="Projects"
+							label="Projects"
+							component="button"
+							onClick={toggleListVisibility}
+						/>
+					)}
+					<StyledTab
+						value="/Github"
+						label="Github"
+						component="a"
+						href="https://github.com/Kamchatskiy"
+						target="_blank"
+						rel="noopener noreferrer"
+					/>
+					<StyledTab
+						value="/Contacts"
+						label="Contacts"
+						component={Link}
+						to="/Contacts"
+					/>
 				</Tabs>
-			</Box >
-		</ContainerHeader >
+			</Box>
+		</ContainerHeader>
 	)
 }
