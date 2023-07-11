@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { forwardRef, useEffect, useState } from "react"
 import Button from "@mui/material/Button"
 import InputLabel from "@mui/material/InputLabel"
 import MenuItem from "@mui/material/MenuItem"
@@ -8,6 +8,7 @@ import MuiAlert from "@mui/material/Alert"
 import Snackbar from "@mui/material/Snackbar"
 import Stack from "@mui/material/Stack"
 import { ContainerContacts, NameInput, UserContactInput, MessageInput, ContactsPhoto } from "./style"
+import anime from "animejs"
 
 export const Contacts = () => {
 	const [UserName,
@@ -46,7 +47,7 @@ export const Contacts = () => {
 		}
 	}
 
-	const Alert = React.forwardRef(function Alert(props, ref) {
+	const Alert = forwardRef(function Alert(props, ref) {
 		return <MuiAlert elevation={6} ref={ref} variant="filled" {...props} />
 	})
 
@@ -62,8 +63,20 @@ export const Contacts = () => {
 		setOpen(false)
 	}
 
+	useEffect(() => {
+		anime({
+			targets: ".container",
+			opacity: [0, 1],
+			translateX: [-250, 0],
+			duration: 1500,
+			easing: "easeInOutQuad",
+		})
+	}, [])
+
 	return (
-		<ContainerContacts>
+		<ContainerContacts
+			className="container"
+		>
 			<NameInput
 				label="Name"
 				variant="outlined"

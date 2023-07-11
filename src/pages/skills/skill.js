@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useEffect, useState } from "react"
 import PropTypes from "prop-types"
 import Typography from "@mui/material/Typography"
 import Rating from "@mui/material/Rating"
@@ -8,6 +8,7 @@ import ListItemIcon from "@mui/material/ListItemIcon"
 import ListItemText from "@mui/material/ListItemText"
 import Switch from "@mui/material/Switch"
 import { ContainerListRatings } from "./style"
+import anime from "animejs"
 
 export const Skill = ({ title, icon, array }) => {
 
@@ -20,7 +21,8 @@ export const Skill = ({ title, icon, array }) => {
 				icon: PropTypes.element.isRequired,
 				rating: PropTypes.number.isRequired
 			})
-		).isRequired
+		).isRequired,
+		animation: PropTypes.number.isRequired
 	}
 
 	const [ratingVisible, setRatingVisible] = useState(false)
@@ -28,6 +30,16 @@ export const Skill = ({ title, icon, array }) => {
 	const handleToggle = () => {
 		setRatingVisible(!ratingVisible)
 	}
+
+	useEffect(() => {
+		anime({
+			targets: ".item",
+			opacity: [0, 1],
+			translateX: [0],
+			duration: 1500,
+			easing: "easeInOutQuad",
+		})
+	}, [])
 
 	return (
 		<>
