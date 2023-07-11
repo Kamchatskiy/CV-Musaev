@@ -1,12 +1,5 @@
-node_modules/
-build/
-docker/
-temp/ 
-LegacySite/
-
-#logs
-*.log
-
-# misc
+node_modules
+build
+dev-scripts
+docker
 ToDo.txt
-.directory
