@@ -1,6 +1,6 @@
 FROM node:latest
 RUN apt-get update && apt-get install
-RUN git clone  https://github.com/Kamchatskiy/CV-Musaev.git
+RUN git clone https://github.com/Kamchatskiy/CV-Musaev.git
 RUN mv CV-Musaev cv
 RUN mv cv /home
 WORKDIR /home/cv

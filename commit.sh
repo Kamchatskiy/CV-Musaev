@@ -8,21 +8,19 @@ then
     #Build Branch
     npm run build
     git checkout build
-    #git add --all build/ #ToDo
+    git checkout main -- start.sh docker/ build/ package.json
+    git add --all
     echo -p "Enter a build branch commit description: " description
-    read description
     git commit -m "$description"
     git push origin build
     clear
     echo "Pushed to build branch!"
 fi
  
-
 # Main Branch
 git checkout main
 git add --all
 echo "Commiting to master branch"
 echo -p "Enter a main branch commit description: " description
-
 git commit -m "$description"
 git push origin main
