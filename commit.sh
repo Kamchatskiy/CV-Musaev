@@ -1,8 +1,8 @@
 #!/bin/bash
 ./eslint.sh
 
-echo -p "Would you like to commit and push to build? (Y/n) " flag
-${flag:=Y}
+read -p "Would you like to commit and push to build? (Y/n) " flag
+: ${flag:=Y}
 if [ $flag=="Y" || $flag =="y"]
 then
     #Build Branch
@@ -10,7 +10,8 @@ then
     git checkout build
     git checkout main -- start.sh docker/ build/ package.json
     git add --all
-    echo -p "Enter a build branch commit description: " description
+    read -p "Enter a build branch commit description: " $description
+    ${flag:="-"}
     git commit -m "$description"
     git push origin build
     clear
@@ -21,6 +22,6 @@ fi
 git checkout main
 git add --all
 echo "Commiting to master branch"
-echo -p "Enter a main branch commit description: " description
+read -p "Enter a main branch commit description: " description
 git commit -m "$description"
 git push origin main
