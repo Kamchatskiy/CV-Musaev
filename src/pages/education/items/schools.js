@@ -21,7 +21,7 @@ export const Schools = () => {
 						minWidth: "120px",
 					}}
 				>
-					Visit (RU)
+					Link (RU)
 				</Button>
 			</Stack>
 
@@ -40,7 +40,7 @@ export const Schools = () => {
 						minWidth: "120px",
 					}}
 				>
-					Visit (RU)
+					Link (RU)
 				</Button>
 
 				<Button
@@ -55,7 +55,7 @@ export const Schools = () => {
 						minWidth: "120px",
 					}}
 				>
-					Visit (EN)
+					Link (EN)
 				</Button>
 			</Stack>
 		</>
