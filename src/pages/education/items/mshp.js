@@ -1,8 +1,8 @@
 import React from "react"
 import ListItemText from "@mui/material/ListItemText"
 import Stack from "@mui/material/Stack"
-import Button from "@mui/material/Button"
 import data from "../data/mshp.json"
+import Certificate from "./certificate"
 
 export const MSHP = () => {
 	return (
@@ -16,25 +16,12 @@ export const MSHP = () => {
 				>
 					<ListItemText primary={course.title} />
 					<Stack direction="column">
-						<ListItemText>
-							Duration: {course.duration}
-						</ListItemText>
-						<ListItemText>
-							Mark: {course.mark}
-						</ListItemText>
+						<ListItemText>Duration: {course.duration}</ListItemText>
+						<ListItemText>Mark: {course.mark}</ListItemText>
 					</Stack>
-					<Button
-						variant="contained"
-						target="_blank"
-						rel="noopener noreferrer"
-						sx={{
-							backgroundColor: "#00ebd4",
-							color: "#000000",
-							minWidth: "120px",
-						}}
-					>
-						Certificate
-					</Button>
+					<Certificate 
+					
+					/>
 				</Stack>
 			))}
 		</>

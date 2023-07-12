@@ -18,7 +18,7 @@ export const Header = () => {
 	}
 
 	const location = useLocation()
-	const [activeTab, setActiveTab] = useState("")
+	const [activeTab, setActiveTab] = useState("/")
 
 	useEffect(() => {
 		setActiveTab(location.pathname)

@@ -10,13 +10,13 @@ export const ContainerContacts = styled.div`
 `
 
 export const NameInput = styled(TextField)`
-  width: 300px;
+  width: 500px;
 `
 
 export const UserContactInput = styled(TextField)`
-  width: 300px;
+  width: 500px;
 `
 
 export const MessageInput = styled(TextField)`
-  width: 300px;
+  width: 500px;
 `

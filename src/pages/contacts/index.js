@@ -81,30 +81,35 @@ export const Contacts = () => {
 
 				<NameInput
 					label="Name"
-					variant="outlined"
+					variant="filled"
 					sx={{
 						backgroundColor: "#00ebd4",
 						borderRadius: 30
 					}}
+					required="true"
 					value={UserName}
 					textColor="primary"
 					onChange={handlerOnChangeUserNameInput} />
+
 				<UserContactInput
 					label="Email/Telegram/PhoneNumber"
-					variant="outlined"
+					variant="filled"
 					sx={{
 						backgroundColor: "#00ebd4",
 						borderRadius: 30
 					}}
+					required="true"
 					value={UserContact}
 					onChange={handlerOnChangeUserContactInput} />
+
 				<MessageInput
 					label="Message"
-					variant="outlined"
+					variant="filled"
 					sx={{
 						backgroundColor: "#00ebd4",
 						borderRadius: 10
 					}}
+					required="true"
 					value={UserMessage}
 					onChange={handlerOnChangeUserMessageInput}
 					multiline
@@ -112,8 +117,14 @@ export const Contacts = () => {
 
 				<FormControl
 					sx={{
-						width: "16%"
-					}}>
+						width: "500px",
+						backgroundColor: "#00ebd4",
+						borderRadius: 30,
+					}}
+					required="true"
+					variant="filled"
+				>
+
 					<InputLabel>Dispatch Reason</InputLabel>
 					<Select
 						sx={{
@@ -136,8 +147,9 @@ export const Contacts = () => {
 						variant="contained"
 						sx={{
 							width: "16%",
+							height: "20%",
 							backgroundColor: "#00ebd4",
-							borderRadius: 30,
+							borderRadius: 5,
 							color: "black"
 						}}
 						onClick={handleSend}
