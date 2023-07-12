@@ -125,7 +125,7 @@ export const Contacts = () => {
 
 				<FormControl
 					sx={{
-						width: "500px",
+						width: "40%",
 						backgroundColor: "#00ebd4",
 						borderRadius: 30,
 					}}

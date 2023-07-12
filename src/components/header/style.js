@@ -13,7 +13,6 @@ export const ContainerHeader = styled.div`
 
 export const StyledTab = styled(Tab)`
   flex: 1;
-  font-size: 40px;
 ;`
 
 export const StyledLink = styled(ListItem)`

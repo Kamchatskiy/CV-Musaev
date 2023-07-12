@@ -4,6 +4,7 @@ import { faCss3Alt, faDocker, faGitAlt, faHtml5, faJava, faJsSquare, faLinux, fa
 import { faC, faCode, faGears, faMicrochip, faServer, faShieldAlt, faTerminal, faWindowMaximize } from "@fortawesome/free-solid-svg-icons"
 import { Skill } from "./skill.js"
 import { ContainerSkills } from "./style.js"
+import { useMediaQuery } from "@mui/material"
 
 
 export const Skills = () => {
@@ -101,8 +102,22 @@ export const Skills = () => {
 		},
 	]
 
+	const isDesktop = useMediaQuery("(min-width: 768px)")
+
 	return (
-		<ContainerSkills>
+		<ContainerSkills
+			style={
+				isDesktop ?
+					{
+						display: "flex",
+						height: "600px",
+						
+					} : {
+						height: "200px",
+						paddingBottom: "400px"
+					}
+			}
+		>
 
 			<Skill
 				title="Programming"
@@ -128,6 +143,6 @@ export const Skills = () => {
 				array={arrayCyberSecurity}
 			/>
 
-		</ContainerSkills>
+		</ContainerSkills >
 	)
 }
