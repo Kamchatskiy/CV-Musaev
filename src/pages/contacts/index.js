@@ -14,14 +14,22 @@ export const Contacts = () => {
 	const [UserName,
 		setUserName] = useState("")
 	const handlerOnChangeUserNameInput = (event) => {
-		setUserName(event.target.value)
+		const value = event.target.value
+		const regex = /^[a-zA-Z\s]*$/
+		if (value.length <= 30 && regex.test(value)) {
+			setUserName(value)
+		}
 	}
 
 	const [UserContact,
 		setUserContact] = useState("")
 	const handlerOnChangeUserContactInput = (event) => {
-		setUserContact(event.target.value)
+		const value = event.target.value
+		if (value.length <= 40) {
+			setUserContact(value)
+		}
 	}
+
 
 	const [UserMessage,
 		setUserMessage] = useState("")
@@ -147,7 +155,7 @@ export const Contacts = () => {
 						variant="contained"
 						sx={{
 							width: "16%",
-							height: "20%",
+							height: "70px",
 							backgroundColor: "#00ebd4",
 							borderRadius: 5,
 							color: "black"
