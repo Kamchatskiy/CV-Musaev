@@ -31,5 +31,6 @@
             "error",
             "never"
         ]
-    }
+    },
+    "ignorePatterns": ["cypress/"]
 }
