@@ -1,5 +1,5 @@
 import React from "react"
-import { SubList } from "./components"
+import { SubList } from "./items/components"
 import { ContainerEducation } from "./style"
 import { Schools } from "./items/schools"
 import { Works } from "./items/works"
