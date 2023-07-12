@@ -7,7 +7,7 @@ import Select from "@mui/material/Select"
 import MuiAlert from "@mui/material/Alert"
 import Snackbar from "@mui/material/Snackbar"
 import Stack from "@mui/material/Stack"
-import { ContainerContacts, NameInput, UserContactInput, MessageInput, ContactsPhoto } from "./style"
+import { ContainerContacts, NameInput, UserContactInput, MessageInput } from "./style"
 import anime from "animejs"
 
 export const Contacts = () => {
@@ -74,101 +74,102 @@ export const Contacts = () => {
 	}, [])
 
 	return (
-		<ContainerContacts
-			className="container"
-		>
-			<NameInput
-				label="Name"
-				variant="outlined"
-				sx={{
-					backgroundColor: "#00ebd4",
-					borderRadius: 30
-				}}
-				value={UserName}
-				textColor="primary"
-				onChange={handlerOnChangeUserNameInput} />
-			<UserContactInput
-				label="Email/Telegram/PhoneNumber"
-				variant="outlined"
-				sx={{
-					backgroundColor: "#00ebd4",
-					borderRadius: 30
-				}}
-				value={UserContact}
-				onChange={handlerOnChangeUserContactInput} />
-			<MessageInput
-				label="Message"
-				variant="outlined"
-				sx={{
-					backgroundColor: "#00ebd4",
-					borderRadius: 10
-				}}
-				value={UserMessage}
-				onChange={handlerOnChangeUserMessageInput}
-				multiline
-				rows={4} />
+		<>
+			<ContainerContacts
+				className="container"
+			>
 
-			<FormControl
-				sx={{
-					width: "16%"
+				<NameInput
+					label="Name"
+					variant="outlined"
+					sx={{
+						backgroundColor: "#00ebd4",
+						borderRadius: 30
+					}}
+					value={UserName}
+					textColor="primary"
+					onChange={handlerOnChangeUserNameInput} />
+				<UserContactInput
+					label="Email/Telegram/PhoneNumber"
+					variant="outlined"
+					sx={{
+						backgroundColor: "#00ebd4",
+						borderRadius: 30
+					}}
+					value={UserContact}
+					onChange={handlerOnChangeUserContactInput} />
+				<MessageInput
+					label="Message"
+					variant="outlined"
+					sx={{
+						backgroundColor: "#00ebd4",
+						borderRadius: 10
+					}}
+					value={UserMessage}
+					onChange={handlerOnChangeUserMessageInput}
+					multiline
+					rows={4} />
+
+				<FormControl
+					sx={{
+						width: "16%"
+					}}>
+					<InputLabel>Dispatch Reason</InputLabel>
+					<Select
+						sx={{
+							backgroundColor: "#00ebd4",
+							borderRadius: 30,
+						}}
+						value={RequestType}
+						onChange={handleChangeRequestType}
+					>
+						<MenuItem value={"work"}>Work Hiring</MenuItem>
+						<MenuItem value={"outsource"}>Outsource Order</MenuItem>
+						<MenuItem value={"other"}>Other</MenuItem>
+					</Select>
+				</FormControl>
+
+				<Stack spacing={2} sx={{
+					width: "100%"
 				}}>
-				<InputLabel>Dispatch Reason</InputLabel>
-				<Select
-					sx={{
-						backgroundColor: "#00ebd4",
-						borderRadius: 30,
-					}}
-					value={RequestType}
-					onChange={handleChangeRequestType}
-				>
-					<MenuItem value={"work"}>Work Hiring</MenuItem>
-					<MenuItem value={"outsource"}>Outsource Order</MenuItem>
-					<MenuItem value={"other"}>Other</MenuItem>
-				</Select>
-			</FormControl>
+					<Button
+						variant="contained"
+						sx={{
+							width: "16%",
+							backgroundColor: "#00ebd4",
+							borderRadius: 30,
+							color: "black"
+						}}
+						onClick={handleSend}
+					>
+						Send
+					</Button>
 
-			<Stack spacing={2} sx={{
-				width: "100%"
-			}}>
-				<Button
-					variant="contained"
-					sx={{
-						width: "16%",
-						backgroundColor: "#00ebd4",
-						borderRadius: 30,
-						color: "black"
-					}}
-					onClick={handleSend}
-				>
-					Send
-				</Button>
-
-				<Snackbar open={open} autoHideDuration={6000} onClose={handleClose}>
-					{FieldsNotEmpty
-						? (
-							<Alert
-								onClose={handleClose}
-								severity="success"
-								sx={{
-									width: "100%"
-								}}>
-								Your message was successfully sent
-							</Alert>
-						)
-						: (
-							<Alert
-								onClose={handleClose}
-								severity="error"
-								sx={{
-									width: "100%"
-								}}>
-								You need to fill all fields
-							</Alert>
-						)}
-				</Snackbar>
-			</Stack>
-
-			<ContactsPhoto />
-		</ContainerContacts>
+					<Snackbar open={open} autoHideDuration={6000} onClose={handleClose}>
+						{FieldsNotEmpty
+							? (
+								<Alert
+									onClose={handleClose}
+									severity="success"
+									sx={{
+										width: "100%"
+									}}>
+									Your message was successfully sent
+								</Alert>
+							)
+							: (
+								<Alert
+									onClose={handleClose}
+									severity="error"
+									sx={{
+										width: "100%"
+									}}>
+									You need to fill all fields
+								</Alert>
+							)}
+					</Snackbar>
+				</Stack>
+			</ContainerContacts>
+		</>
 	)
 }

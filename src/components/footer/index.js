@@ -1,7 +1,8 @@
 import React from "react"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faInstagram, faVk, faTelegram, faYoutube, faGithub } from "@fortawesome/free-brands-svg-icons"
-import { ContainerFooter, CustomUl, SocialLink } from "./style.js"
+import { ContainerFooter } from "./style.js"
+import { List, ListItem } from "@mui/material"
 
 const instagram = <FontAwesomeIcon icon={faInstagram} />
 const youtube = <FontAwesomeIcon icon={faYoutube} />
@@ -12,13 +13,48 @@ const github = <FontAwesomeIcon icon={faGithub} />
 export const Footer = () => {
 	return (
 		<ContainerFooter>
-			<CustomUl>
-				<li><SocialLink href="https://www.youtube.com/@kamch4tskiy">{youtube}</SocialLink></li>
-				<li><SocialLink href="https://instagram.com/maratkamchatskiy">{instagram}</SocialLink></li>
-				<li><SocialLink href="https://vk.com/maratkamchatskiy">{vk}</SocialLink></li>
-				<li><SocialLink href="https://t.me/maratkamchatskiy">{telegram}</SocialLink></li>
-				<li><SocialLink href="https://github.com/Kamchatskiy">{github}</SocialLink></li>
-			</CustomUl>
+
+			<List
+				sx={{
+					display: "flex",
+				}}
+			>
+				<ListItem
+					component="a"
+					href="https://www.youtube.com/@kamch4tskiy"
+					style={{ textDecoration: "none", color: "inherit"}}
+				>
+					{youtube}
+				</ListItem>
+				<ListItem
+					component="a"
+					href="https://instagram.com/maratkamchatskiy"
+					style={{ textDecoration: "none", color: "inherit"}}
+				>
+					{instagram}
+				</ListItem>
+				<ListItem
+					component="a"
+					href="https://vk.com/maratkamchatskiy"
+					style={{ textDecoration: "none", color: "inherit"}}
+				>
+					{vk}
+				</ListItem>
+				<ListItem
+					component="a"
+					href="https://t.me/maratkamchatskiy"
+					style={{ textDecoration: "none", color: "inherit"}}
+				>
+					{telegram}
+				</ListItem>
+				<ListItem
+					component="a"
+					href="https://github.com/Kamchatskiy"
+					style={{ textDecoration: "none", color: "inherit"}}
+				>
+					{github}
+				</ListItem>
+			</List>
 		</ContainerFooter>
 	)
 }

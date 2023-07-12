@@ -20,8 +20,3 @@ export const UserContactInput = styled(TextField)`
 export const MessageInput = styled(TextField)`
   width: 300px;
 `
-
-export const ContactsPhoto = styled.img`
-  width: 600px;
-  align-items: right;
-`
