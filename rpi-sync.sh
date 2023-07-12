@@ -1,0 +1,1 @@
+rsync -vz -e 'ssh -p 6487' --progress --exclude='node_modules' /home/marat/MyWebsite/ pi@109.95.219.90:/home/pi/cv/cv-dev/

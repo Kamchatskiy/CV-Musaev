@@ -23,9 +23,11 @@
   },
   "scripts": {
     "start:dev": "react-scripts start",
+    "start:prod": "node server.js",
     "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "webdash": "webdash serve",
+    "eslint:fix": "eslint src/** --fix",
+    "cypress:open": "cypress open"
   },
   "author": "Marat Musaev",
   "browserslist": {
@@ -41,6 +43,7 @@
     ]
   },
   "devDependencies": {
+    "cypress": "^12.17.1",
     "eslint": "^8.44.0",
     "eslint-plugin-react": "^7.32.2",
     "webdash": "^1.5.0",
