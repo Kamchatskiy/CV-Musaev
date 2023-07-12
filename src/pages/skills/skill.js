@@ -44,7 +44,10 @@ export const Skill = ({ title, icon, array }) => {
 	return (
 		<>
 			<List
-				sx={{ width: "100%" }}
+				sx={{
+					width: "100%",
+					height: "65%"
+				}}
 				className="item"
 			>
 				<ListItem
