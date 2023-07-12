@@ -2,7 +2,7 @@ import React from "react"
 import ListItemText from "@mui/material/ListItemText"
 import Stack from "@mui/material/Stack"
 import data from "../data/mshp.json"
-import Certificate from "./certificate"
+import Certificate from "../components/certificate"
 
 export const MSHP = () => {
 	return (
