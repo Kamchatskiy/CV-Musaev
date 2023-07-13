@@ -50,6 +50,10 @@ export const Contacts = () => {
 		if (UserName && UserContact && UserMessage && RequestType) {
 			setFieldsNotEmpty(true)
 			handleClick()
+			setUserName("") 
+			setUserContact("") 
+			setUserMessage("") 
+			setRequestType("") 
 		} else {
 			setFieldsNotEmpty(false)
 		}
