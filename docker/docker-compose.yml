@@ -1,0 +1,11 @@
+version: "3"
+services:
+  cv:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 3000:15000
+    volumes:
+      - /cv:/home/pi/cv/prod
+    restart: always

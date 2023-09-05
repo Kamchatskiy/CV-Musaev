@@ -1,0 +1,1 @@
+rsync -rav -e 'ssh -p 6487' --progress --exclude='node_modules' --exclude='build' /home/marat/Programming/Projects/cv pi@109.95.219.90:/home/pi/cv/dev/

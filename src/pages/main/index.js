@@ -1,7 +1,7 @@
 import React, { useEffect } from "react"
 import { ContainerMain } from "./style.js"
 import anime from "animejs"
-import avatar from "./avatar.png"
+import avatar from "./img/avatar.png"
 import Typography from "@mui/material/Typography"
 import Avatar from "@mui/material/Avatar"
 

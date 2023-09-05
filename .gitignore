@@ -1,6 +1,7 @@
 node_modules
 build
 dev
+archive
 messages
 cv.code-workspace
 ToDo.txt

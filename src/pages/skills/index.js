@@ -1,11 +1,9 @@
 import React from "react"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faCss3Alt, faDocker, faGitAlt, faHtml5, faJava, faJsSquare, faLinux, faPhp, faPython, faReact, faRust, faWindows } from "@fortawesome/free-brands-svg-icons"
+import { faCss3Alt, faDocker, faGitAlt, faHtml5, faJava, faJsSquare, faLinux, faPython, faReact, faWindows, faGolang } from "@fortawesome/free-brands-svg-icons"
 import { faC, faCode, faGears, faMicrochip, faServer, faShieldAlt, faTerminal, faWindowMaximize } from "@fortawesome/free-solid-svg-icons"
-import { Skill } from "./skill.js"
+import { Skill } from "./components/skill.js"
 import { ContainerSkills } from "./style.js"
-import { useMediaQuery } from "@mui/material"
-
 
 export const Skills = () => {
 
@@ -16,8 +14,8 @@ export const Skills = () => {
 			rating: 3
 		},
 		{
-			text: "Rust",
-			icon: <FontAwesomeIcon icon={faRust} style={{ color: "#00ebd4", }} />,
+			text: "Go",
+			icon: <FontAwesomeIcon icon={faGolang} style={{ color: "#00ebd4", }} />,
 			rating: 0
 		},
 		{
@@ -29,12 +27,7 @@ export const Skills = () => {
 			text: "Java",
 			icon: <FontAwesomeIcon icon={faJava} style={{ color: "#00ebd4", }} />,
 			rating: 0
-		},
-		{
-			text: "PHP",
-			icon: <FontAwesomeIcon icon={faPhp} style={{ color: "#00ebd4", }} />,
-			rating: 0
-		},
+		}
 	]
 
 	const arrayFrontEnd = [
@@ -80,12 +73,17 @@ export const Skills = () => {
 		{
 			text: "Docker",
 			icon: <FontAwesomeIcon icon={faDocker} style={{ color: "#00ebd4", }} />,
-			rating: 3
+			rating: 2
 		},
 		{
 			text: "Windows",
 			icon: <FontAwesomeIcon icon={faWindows} style={{ color: "#00ebd4", }} />,
 			rating: 3
+		},
+		{
+			text: "PowerShell",
+			icon: <FontAwesomeIcon icon={faWindows} style={{ color: "#00ebd4", }} />,
+			rating: 0
 		},
 	]
 
@@ -102,22 +100,8 @@ export const Skills = () => {
 		},
 	]
 
-	const isDesktop = useMediaQuery("(min-width: 768px)")
-
 	return (
-		<ContainerSkills
-			style={
-				isDesktop ?
-					{
-						display: "flex",
-						height: "600px",
-						
-					} : {
-						height: "200px",
-						paddingBottom: "400px"
-					}
-			}
-		>
+		<ContainerSkills>
 
 			<Skill
 				title="Programming"

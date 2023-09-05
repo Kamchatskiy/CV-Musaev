@@ -31,7 +31,6 @@
     "cypress": "^12.17.1",
     "eslint": "^8.44.0",
     "eslint-plugin-react": "^7.32.2",
-    "webdash": "^1.5.0",
     "webdash-embed": "^1.0.0",
     "webdash-hue": "^1.0.0",
     "webdash-npm-scripts": "^1.4.0",

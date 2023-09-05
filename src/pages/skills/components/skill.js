@@ -7,7 +7,7 @@ import ListItem from "@mui/material/ListItem"
 import ListItemIcon from "@mui/material/ListItemIcon"
 import ListItemText from "@mui/material/ListItemText"
 import Switch from "@mui/material/Switch"
-import { ContainerListRatings } from "./style"
+import { ContainerListRatings } from "../style"
 import anime from "animejs"
 
 export const Skill = ({ title, icon, array }) => {
@@ -45,7 +45,7 @@ export const Skill = ({ title, icon, array }) => {
 		<>
 			<List
 				sx={{
-					width: "100%",
+					width: "50%",
 					height: "65%"
 				}}
 				className="item"
@@ -79,9 +79,9 @@ export const Skill = ({ title, icon, array }) => {
 							{array.map((item) => (
 								<div key={item.text}>
 									<Typography component="legend">
-										{item.text} {item.icon}
+										{item.text} {item.icon} 
+										<Rating value={item.rating} size="large" readOnly />
 									</Typography>
-									<Rating value={item.rating} size="large" readOnly />
 								</div>
 							))}
 						</ContainerListRatings>
